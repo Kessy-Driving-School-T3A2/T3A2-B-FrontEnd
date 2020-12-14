@@ -11,28 +11,33 @@
 
 .top-contact-link {
   background-color: black;
-  height: calc(4vw + 1vmin);
+  height: calc(3vw + 1vmin);
   color: white;
+  font-size: calc(1vw + 1vmin);
+  padding: 10px 0 0 0;
 }
 
 .main-header-nav {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-  /* margin: 20px 0; */
+  height: calc(7vw + 1vmin);
 }
 .top-menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  font-size: calc(1vw + 1vmin);
+  padding: calc(1vw + 1vmin) calc(1.2vw);
+  max-height: 8vw;
 }
 
 img {
-  max-height: 69%;
   max-width: 100%;
-  height: auto;
-  width: 150px;
-  padding: 10px 0;
+  height: calc(5vw + 1vmin);
+  width: calc(15vw + 1vmin);
+
+  /* padding: 10px 0; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -41,16 +46,10 @@ img {
   }
 }
 
-.item a {
+a {
   color: rgb(245, 241, 241);
   text-decoration: none;
-  margin: 20px 5px 0 0;
-  height: 5px;
-}
-
-.active {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
+  margin: 0 10px;
 }
 
 @keyframes App-logo-spin {

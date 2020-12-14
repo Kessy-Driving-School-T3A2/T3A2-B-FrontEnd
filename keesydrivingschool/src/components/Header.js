@@ -12,23 +12,23 @@ class Header extends Component {
         <div className="main-header-nav">
           <img src={logo} alt="logo" />
 
-          <div className="top-menu item">
-            <Link href="/" activeClassName="active" exact={true}>
+          <div className="top-menu">
+            <Link href="/" className="">
               Home
             </Link>
-            <Link href="/aboutUs" activeClassName="active" exact={true}>
+            <Link href="/aboutUs" className="">
               About Us
             </Link>
-            <Link href="/prices&packages" activeClassName="active" exact={true}>
+            <Link href="/prices&packages" className="">
               Prices & Packages
             </Link>
-            <Link href="/faqs" activeClassName="active" exact={true}>
+            <Link href="/faqs" className="">
               FAQs
             </Link>
-            <Link href="/reviews" activeClassName="active" exact={true}>
+            <Link href="/reviews" className="">
               Reviews
             </Link>
-            <Link href="/contactUs" activeClassName="active" exact={true}>
+            <Link href="/contactUs" className="">
               Contact Us
             </Link>
           </div>
