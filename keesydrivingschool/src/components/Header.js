@@ -10,26 +10,25 @@ class Header extends Component {
           0419 421 848 info@keesydrivingschool.com.au
         </div>
         <div className="main-header-nav">
-          <div className="logo">
-            <img src={logo} alt="logo" />
-          </div>
-          <div className="top-menu">
-            <Link href="/" className="item">
+          <img src={logo} alt="logo" />
+
+          <div className="top-menu item">
+            <Link href="/" activeClassName="active" exact={true}>
               Home
             </Link>
-            <Link href="/aboutUs" className="item">
+            <Link href="/aboutUs" activeClassName="active" exact={true}>
               About Us
             </Link>
-            <Link href="/prices&packages" className="item">
+            <Link href="/prices&packages" activeClassName="active" exact={true}>
               Prices & Packages
             </Link>
-            <Link href="/faqs" className="item">
+            <Link href="/faqs" activeClassName="active" exact={true}>
               FAQs
             </Link>
-            <Link href="/reviews" className="item">
+            <Link href="/reviews" activeClassName="active" exact={true}>
               Reviews
             </Link>
-            <Link href="/contactUs" className="item">
+            <Link href="/contactUs" activeClassName="active" exact={true}>
               Contact Us
             </Link>
           </div>

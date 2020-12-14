@@ -4,15 +4,14 @@
 
 .main-header {
   background-color: #f17b2b;
-  height: 117px;
-  line-height: 23px;
-  font-weight: 500;
+  height: calc(10vw + 1vmin);
   display: flex;
   flex-flow: column;
 }
 
 .top-contact-link {
   background-color: black;
+  height: calc(4vw + 1vmin);
   color: white;
 }
 
@@ -20,17 +19,20 @@
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-  padding: 20px 0;
+  /* margin: 20px 0; */
+}
+.top-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.item {
-  margin: 0 10px;
-}
 img {
   max-height: 69%;
   max-width: 100%;
   height: auto;
   width: 150px;
+  padding: 10px 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,19 +41,15 @@ img {
   }
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+.item a {
+  color: rgb(245, 241, 241);
+  text-decoration: none;
+  margin: 20px 5px 0 0;
+  height: 5px;
+}
 
-a {
-  color: black;
+.active {
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
