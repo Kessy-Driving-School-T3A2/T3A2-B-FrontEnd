@@ -3,51 +3,148 @@
 }
 
 .main-header {
+  width: 100%;
   background-color: #f17b2b;
-  height: calc(10vw + 1vmin);
+  height: 150px;
   display: flex;
   flex-flow: column;
+  position: fixed;
+  top: 0px;
 }
 
 .top-contact-link {
   background-color: black;
-  height: calc(3vw + 1vmin);
+  height: 35px;
   color: white;
-  font-size: calc(1vw + 1vmin);
-  padding: 10px 0 0 0;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .main-header-nav {
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
-  height: calc(7vw + 1vmin);
+  height: 100px;
 }
 .top-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  font-size: calc(1vw + 1vmin);
-  padding: calc(1vw + 1vmin) calc(1.2vw);
+  font-size: 25px;
+  padding: 40px;
   max-height: 8vw;
 }
 
 img {
+  width: auto;
+  height: 70px;
   max-width: 100%;
-  height: calc(5vw + 1vmin);
-  width: calc(15vw + 1vmin);
-
-  /* padding: 10px 0; */
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  padding: 20px;
 }
 
 a {
   color: rgb(245, 241, 241);
   text-decoration: none;
   margin: 0 10px;
+}
+
+/*----------------------------------------- screen 800px */
+
+@media all and (max-width: 800px) {
+  .main-header {
+    height: 178px;
+  }
+
+  .top-contact-link {
+    height: 49px;
+    color: white;
+    font-size: 25px;
+    padding: 18px;
+  }
+
+  .main-header-nav {
+    height: 95px;
+  }
+
+  .top-menu {
+    font-size: 20px;
+    padding: 20px;
+    max-height: 8vw;
+  }
+
+  img {
+    width: auto;
+    height: 58px;
+  }
+}
+
+/*----------------------------------------- screen 600px */
+
+@media all and (max-width: 600px) {
+  .main-header {
+    height: 175px;
+  }
+
+  .top-contact-link {
+    height: 48px;
+    color: white;
+    font-size: 23px;
+    padding: 17px;
+  }
+
+  .main-header-nav {
+    height: 92px;
+  }
+
+  img {
+    width: auto;
+    height: 56px;
+    padding: 20px;
+  }
+}
+
+/*----------------------------------------- screen 500px */
+
+@media all and (max-width: 500px) {
+  .main-header {
+    height: 170px;
+  }
+
+  .top-contact-link {
+    height: 46px;
+    color: white;
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .main-header-nav {
+    height: 90px;
+  }
+
+  img {
+    height: 55px;
+  }
+}
+
+/*----------------------------------------- screen 400px */
+
+@media all and (max-width: 400px) {
+  .main-header {
+    height: 150px;
+  }
+
+  .top-contact-link {
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .main-header-nav {
+    height: 85px;
+  }
+
+  img {
+    height: 50px;
+  }
 }
