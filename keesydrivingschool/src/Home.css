@@ -1,0 +1,133 @@
+.homepage {
+  max-height: 100vh;
+}
+.home {
+  margin: 0 0 100px 0;
+  z-index: +1;
+}
+.slide-banner {
+  background-color: rgba(7, 6, 6, 0.301);
+  position: relative;
+  top: 150px;
+  height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.banner-heading {
+  background-color: rgba(14, 13, 13, 0.459);
+  position: relative;
+  top: 20%;
+  margin: 0 250px;
+  padding: 5px 0px;
+}
+h1 {
+  font-weight: 200;
+}
+h2,
+p {
+  color: #f17b2b;
+}
+h2 {
+  font-weight: 250;
+}
+
+.home-body {
+  position: relative;
+  top: 50%;
+  display: flex;
+  flex-flow: column;
+  margin: 0 0 50px 0;
+}
+
+.home-body-parts {
+  display: flex;
+  flex-flow: column;
+  background-color: #fff5ef;
+  padding: 80px 0;
+}
+
+.one-line {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 0 0 50px 0;
+}
+
+.one-part {
+  margin: 0 30px;
+  justify-content: space-evenly;
+}
+
+/*----------------------------------------- screen 1000px */
+
+@media all and (max-width: 1000px) {
+  .banner-heading {
+    margin: 0 100px;
+  }
+}
+
+/*----------------------------------------- screen 800px */
+
+@media all and (max-width: 800px) {
+  .slide-banner {
+    position: relative;
+    top: 177px;
+  }
+
+  .banner-heading {
+    margin: 0 120px;
+  }
+}
+
+/*----------------------------------------- screen 600px */
+
+@media all and (max-width: 600px) {
+  .slide-banner {
+    position: relative;
+    top: 175px;
+  }
+
+  .banner-heading {
+    margin: 0 70px;
+  }
+}
+
+/*----------------------------------------- screen 500px */
+
+@media all and (max-width: 500px) {
+  .slide-banner {
+    position: relative;
+    top: 170px;
+  }
+
+  .banner-heading {
+    margin: 0 50px;
+  }
+}
+
+/*----------------------------------------- screen 400px */
+
+@media all and (max-width: 400px) {
+  .slide-banner {
+    position: relative;
+    top: 150px;
+  }
+
+  .banner-heading {
+    margin: 0 30px;
+  }
+}
+
+/*----------------------------------------- screen 300px */
+
+@media all and (max-width: 300px) {
+  .slide-banner {
+    position: relative;
+    top: 150px;
+  }
+
+  .banner-heading {
+    margin: 0 20px;
+  }
+}
