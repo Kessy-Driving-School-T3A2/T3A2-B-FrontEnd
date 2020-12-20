@@ -1,20 +1,10 @@
-import React, { Component } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import React from "react";
+import "../../App.css";
 
-// import icon1 from "../assets/icon1";
-// import icon2 from "../assets/icon2";
-// import icon3 from "../assets/icon3";
-// import icon4 from "../assets/icon4";
-// import icon5 from "../assets/icon5";
-// import icon6 from "../assets/icon6";
-import "../Home.css";
-
-class Home extends Component {
+class Home extends React.Component {
   render() {
     return (
       <div className="homepage">
-        <Header />
         <div className="home">
           <div className="slide-banner">
             <div className="banner-heading">
@@ -51,8 +41,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
-        {/* <Footer /> */}
       </div>
     );
   }
