@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import hamburger from "../assets/hamburger.png";
 
 const Header = () => {
   return (
@@ -31,6 +32,31 @@ const Header = () => {
           <Link to="/contactUs" className="item">
             Contact Us
           </Link>
+        </div>
+        <div className="hamburger">
+          <div className="hamburger-icon">
+            <img src={hamburger} alt="hamburger" />
+          </div>
+          <div className="hamburger_dropdown_content">
+            <Link to="/" className="item">
+              Home
+            </Link>
+            <Link to="/aboutUs" className="item">
+              About Us
+            </Link>
+            <Link to="/prices&packages" className="item">
+              Prices & packages
+            </Link>
+            <Link to="/faqs" className="item">
+              FAQs
+            </Link>
+            <Link to="/reviews" className="item">
+              Reviews
+            </Link>
+            <Link to="/contactUs" className="item">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>
