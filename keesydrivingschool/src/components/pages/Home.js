@@ -1,10 +1,13 @@
 import React from "react";
+import Bottombanner from "../Bottombanner";
+import Footer from "../Footer";
 import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
 import icon3 from "../../assets/icon3.png";
 import icon4 from "../../assets/icon4.png";
 import icon5 from "../../assets/icon5.png";
 import icon6 from "../../assets/icon6.png";
+import bottompic from "../../assets/bottompic.jpg";
 
 class Home extends React.Component {
   render() {
@@ -68,6 +71,8 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
+          <Bottombanner />
+          <Footer />
         </div>
       </div>
     );

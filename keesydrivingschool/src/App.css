@@ -99,9 +99,7 @@ p {
   padding-bottom: calc(5px + 1rem);
 }
 
-/* media-query */
-
-/* ---------home---------- */
+/* ------------------------ header ------------------- */
 
 .hamburger {
   visibility: hidden;
@@ -117,11 +115,12 @@ p {
 .hamburger_dropdown_content {
   display: none;
   position: absolute;
-  background-color: #f17b2b;
+  background-color: #f47b2a;
   min-width: calc(10px + 1rem);
+  width: 90vw;
+  right: 1vw;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.643);
   z-index: 1;
-  font-size: 20px;
   text-align: center;
   margin-right: 10px;
 }
@@ -134,26 +133,104 @@ p {
   font-size: 10px;
 }
 
-.hamburger_dropdown:hover .hamburger_dropdown_content {
+.hamburger:hover .hamburger_dropdown_content {
   display: block;
 }
 
-/* media-query */
+/*---------- bottom banner --------------- */
+
+.bottompic {
+  position: inherit;
+}
+
+.bottompic-contact {
+  padding: 8vw 0;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  background-image: url(./assets/bottompic.jpg);
+  background-size: auto;
+  height: 5vw;
+}
+.bottompic-contact > p {
+  color: black;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/* ----------------------- Footer --------------- */
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 15px 10px;
+  margin: auto;
+  width: 100%;
+  height: 80px;
+  position: inherit;
+  bottom: 0px;
+  font-size: 25px;
+  z-index: 0;
+}
+.footer > p {
+  color: white;
+  font-size: 10px;
+}
+
+/*------------------------ media-query ------------------------- */
+
+@media all and (max-width: 1000px) {
+  .bottompic-contact {
+    padding-top: 8vw 0;
+    height: 10vw;
+  }
+  .footer {
+    height: 110px;
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+}
 
 @media all and (max-width: 600px) {
-  .hamburger {
-    visibility: visible;
-  }
   .header-right-menu {
     height: 0;
     width: 0;
     visibility: hidden;
   }
+  .hamburger {
+    height: auto;
+    visibility: visible;
+    right: 40vw;
+    top: -10px;
+  }
 
-  .hamburger_dropdown_content {
-    display: block;
-    width: 250px;
-    position: absolute;
-    right: 30px;
+  .bottompic-contact {
+    height: 15vw;
+  }
+
+  .footer {
+    height: 140px;
+    font-size: 18px;
+    padding: 10px 5px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .bottompic-contact {
+    padding-top: 8vw 0;
+    height: 20vw;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .bottompic-contact {
+    padding-top: 7vw 0;
+    height: 25vw;
+  }
+
+  .footer {
+    height: 125px;
+    font-size: 13px;
+    padding: 8px 5px;
   }
 }
