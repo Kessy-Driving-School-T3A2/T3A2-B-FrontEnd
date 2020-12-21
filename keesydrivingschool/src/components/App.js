@@ -4,7 +4,7 @@ import "../App.css";
 
 import history from "../history";
 import Header from "./Header";
-import Footer from "./Footer";
+
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Prices from "./pages/Prices";
