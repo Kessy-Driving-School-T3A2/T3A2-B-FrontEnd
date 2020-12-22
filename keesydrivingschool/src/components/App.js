@@ -11,6 +11,9 @@ import Prices from "./pages/Prices";
 import FAQs from "./pages/FAQs";
 import Reviews from "./pages/Reviews";
 import Contact from "./pages/Contact";
+import AdminLogin from "./pages/AdminLogin";
+import AdminPrice from "./pages/AdminPrice";
+import AdminFAQ from "./pages/AdminFAQ";
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
             <Route path="/faqs" exact component={FAQs} />
             <Route path="/reviews" exact component={Reviews} />
             <Route path="/contact" exact component={Contact} />
+            <Route path="/adminLogin" exact component={AdminLogin} />
+            <Route path="/adminPrice" exact component={AdminPrice} />
+            <Route path="/adminFAQ" exact component={AdminFAQ} />
           </Switch>
         </div>
       </Router>
