@@ -44,7 +44,6 @@ class AboutUs extends React.Component {
           </div>
           <div className="sidebar-contact">sidebar contact</div>
         </div>
-
         <Footer />
       </div>
     );
