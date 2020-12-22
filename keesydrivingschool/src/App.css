@@ -27,6 +27,7 @@ a {
 
 h1 {
   font-weight: 3rem;
+  padding-top: 30px;
 }
 
 /* header */
@@ -105,7 +106,7 @@ p {
 
 /*---------------------------- about us ---------------------------- */
 
-.aboutus {
+.common_container {
   position: relative;
   top: calc(150px + 1rem);
   z-index: -1;
@@ -147,6 +148,58 @@ p {
 }
 .paragraph {
   color: black;
+}
+
+/* common-container */
+.common_container {
+  display: flex;
+  /* padding: 0 30px; */
+}
+
+.common_container-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.common_container-parts {
+  display: flex;
+  flex-flow: column;
+  width: 350px;
+  text-align: left;
+  padding: 30px;
+}
+.common_container-one-part-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid orange;
+  margin: 1vw 10vw;
+  padding: 20px 0;
+}
+
+.hours_service {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hours_service > ul {
+  padding-top: 5px;
+}
+
+.hours_service > ul > li {
+  padding: 5px 0;
+}
+
+/* reviews */
+.review-container-parts {
+  display: flex;
+}
+
+.all-reviews {
+  height: 90vw;
 }
 
 /* ------------------------ header ------------------- */
@@ -246,6 +299,11 @@ p {
     position: absolute;
     bottom: 300px;
   }
+
+  .common_container-one-part-child {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -275,7 +333,7 @@ p {
     font-size: 18px;
     padding: 10px 5px;
     position: absolute;
-    bottom: 0px;
+    bottom: -100px;
   }
 }
 

@@ -6,7 +6,7 @@ import clientimage from "../../assets/clientimage.jpg";
 class AboutUs extends React.Component {
   render() {
     return (
-      <div className="aboutus">
+      <div className="common_container">
         <h1 style={{ color: "black", padding: "calc(1px + 1rem) 0" }}>
           About Us
         </h1>
