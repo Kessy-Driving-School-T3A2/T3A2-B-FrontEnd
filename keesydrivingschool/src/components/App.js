@@ -4,13 +4,13 @@ import "../App.css";
 
 import history from "../history";
 import Header from "./Header";
-import Footer from "./Footer";
+
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Prices from "./pages/Prices";
 import FAQs from "./pages/FAQs";
 import Reviews from "./pages/Reviews";
-import ContactUs from "./pages/ContactUs";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -24,9 +24,8 @@ const App = () => {
             <Route path="/prices" exact component={Prices} />
             <Route path="/faqs" exact component={FAQs} />
             <Route path="/reviews" exact component={Reviews} />
-            <Route path="/contactUs" exact component={ContactUs} />
+            <Route path="/contact" exact component={Contact} />
           </Switch>
-          {/* <Footer /> */}
         </div>
       </Router>
     </div>

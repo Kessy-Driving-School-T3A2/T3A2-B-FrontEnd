@@ -105,7 +105,7 @@ p {
 
 /*---------------------------- about us ---------------------------- */
 
-.aboutus {
+.common_container {
   position: relative;
   top: calc(150px + 1rem);
   z-index: -1;
@@ -147,6 +147,24 @@ p {
 }
 .paragraph {
   color: black;
+}
+
+/* common-container */
+
+.common_container-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* reviews */
+.review-container-parts {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.all-reviews {
+  height: 100vw;
 }
 
 /* ------------------------ header ------------------- */

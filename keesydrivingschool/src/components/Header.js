@@ -20,7 +20,7 @@ const Header = () => {
           <Link to="/aboutUs" className="item">
             About Us
           </Link>
-          <Link to="/prices&packages" className="item">
+          <Link to="/prices" className="item">
             Prices & packages
           </Link>
           <Link to="/faqs" className="item">
@@ -29,7 +29,7 @@ const Header = () => {
           <Link to="/reviews" className="item">
             Reviews
           </Link>
-          <Link to="/contactUs" className="item">
+          <Link to="/contact" className="item">
             Contact Us
           </Link>
         </div>
@@ -44,7 +44,7 @@ const Header = () => {
             <Link to="/aboutUs" className="item">
               About Us
             </Link>
-            <Link to="/prices&packages" className="item">
+            <Link to="/prices" className="item">
               Prices & packages
             </Link>
             <Link to="/faqs" className="item">
@@ -53,7 +53,7 @@ const Header = () => {
             <Link to="/reviews" className="item">
               Reviews
             </Link>
-            <Link to="/contactUs" className="item">
+            <Link to="/contact" className="item">
               Contact Us
             </Link>
           </div>
