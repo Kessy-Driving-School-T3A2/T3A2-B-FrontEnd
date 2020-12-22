@@ -113,7 +113,7 @@ p {
   flex-wrap: wrap;
   flex-flow: column;
   margin: auto;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .aboutus-body {
@@ -121,7 +121,7 @@ p {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
-  height: 50vh;
+  height: 100vh;
   flex-wrap: wrap;
 }
 .clientimage {
@@ -241,6 +241,13 @@ p {
   }
 }
 
+@media all and (max-width: 800px) {
+  .box {
+    position: absolute;
+    bottom: 300px;
+  }
+}
+
 @media all and (max-width: 600px) {
   .header-right-menu {
     height: 0;
@@ -258,10 +265,17 @@ p {
     height: 15vw;
   }
 
+  .box {
+    position: absolute;
+    bottom: 200px;
+  }
+
   .footer {
     height: 140px;
     font-size: 18px;
     padding: 10px 5px;
+    position: absolute;
+    bottom: 0px;
   }
 }
 
@@ -270,15 +284,21 @@ p {
     padding-top: 8vw 0;
     height: 20vw;
   }
+
+  .box {
+    position: absolute;
+    bottom: 40px;
+  }
+  .footer {
+    position: absolute;
+    bottom: -130px;
+  }
 }
 
 @media all and (max-width: 400px) {
   .aboutus-body {
-    /* padding-top: 20px; */
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
-    height: 70vh;
     flex-wrap: wrap;
   }
   .clientimage {
@@ -291,17 +311,17 @@ p {
     flex-flow: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    height: 10vw;
+    height: 30vh;
   }
 
   .aboutus-details {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
     width: 80vw;
-    height: 20vw;
-    text-align: left;
-    padding-left: 20px;
+    height: 10vw;
+  }
+
+  .box {
+    position: absolute;
+    bottom: -90px;
   }
 
   .bottompic-contact {
@@ -310,6 +330,8 @@ p {
   }
 
   .footer {
+    position: absolute;
+    bottom: -250px;
     height: 125px;
     font-size: 13px;
     padding: 8px 5px;

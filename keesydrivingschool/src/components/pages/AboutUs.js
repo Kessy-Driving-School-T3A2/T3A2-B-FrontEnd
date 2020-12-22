@@ -1,6 +1,6 @@
 import React from "react";
-import Bottombanner from "../Bottombanner";
 import Footer from "../Footer";
+import ContactinfoBox from "../ContactinfoBox";
 import clientimage from "../../assets/clientimage.jpg";
 
 class AboutUs extends React.Component {
@@ -42,7 +42,7 @@ class AboutUs extends React.Component {
               </p>
             </div>
           </div>
-          <div className="sidebar-contact">sidebar contact</div>
+          <ContactinfoBox />
         </div>
 
         <Footer />
