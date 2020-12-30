@@ -27,20 +27,35 @@ class CreateFAQ extends Component {
 
   render() {
     return (
-      <form>
+      <form
+        style={{
+          display: "flex",
+          flexFlow: "column",
+          margin: "30px 15vw"
+        }}
+      >
         <input
           placeholder="Add Question"
           type="text"
           value={this.state.question}
           onChange={this.handleQuestionChange}
+          className="form-field"
         />
         <input
           placeholder="Add Answer"
           type="text"
           value={this.state.Answer}
           onChange={this.handleAnswerChange}
+          className="form-field"
+          style={{ paddingBottom: "30px" }}
         />
-        <input type="submit" value="submit" onClick={this.handleSubmit} />
+        <input
+          type="submit"
+          value="Add FAQ"
+          onClick={this.handleSubmit}
+          className="form-field"
+          style={{ backgroundColor: "#f47b2a" }}
+        />
       </form>
     );
   }

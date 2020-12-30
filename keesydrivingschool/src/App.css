@@ -217,6 +217,15 @@ p {
   background-color: orange;
 }
 
+/* create faq form */
+
+.form-field {
+  margin: 5px 75px;
+  background-color: rgba(246, 203, 175, 0.924);
+  border: none;
+  padding: 10px 15px;
+}
+
 /* ------------------------ header ------------------- */
 
 .hamburger {
