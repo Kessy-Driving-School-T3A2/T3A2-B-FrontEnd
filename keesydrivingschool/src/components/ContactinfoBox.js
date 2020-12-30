@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ContactinfoBox extends React.Component {
   render() {
@@ -36,7 +37,9 @@ class ContactinfoBox extends React.Component {
             padding: "10px 15px"
           }}
         >
-          Book A Lesson Now
+          <Link to="/contact" style={{ color: "black" }}>
+            Book A Lesson Now
+          </Link>
         </button>
       </div>
     );

@@ -8,6 +8,7 @@ import icon4 from "../../assets/icon4.png";
 import icon5 from "../../assets/icon5.png";
 import icon6 from "../../assets/icon6.png";
 import bottompic from "../../assets/bottompic.jpg";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   render() {
@@ -34,7 +35,10 @@ class Home extends React.Component {
             >
               Welcome
             </h2>
-            <p style={{ color: "orange" }}>BOOK LESSON NOW</p>
+            <Link to="/contact" className="item" style={{ color: "orange" }}>
+              BOOK LESSON NOW
+            </Link>
+            {/* <p style={{ color: "orange" }}>BOOK LESSON NOW</p> */}
           </div>
         </div>
         <div className="home-body">
