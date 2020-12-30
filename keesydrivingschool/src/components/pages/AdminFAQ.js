@@ -75,6 +75,7 @@ class AdminFAQ extends React.Component {
           </div>
         </div>
         <AdminControlNav />
+
         <Footer />
       </div>
     );
