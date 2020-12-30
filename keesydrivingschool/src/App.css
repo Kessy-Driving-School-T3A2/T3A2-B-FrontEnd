@@ -202,6 +202,21 @@ p {
   height: 90vw;
 }
 
+/* admin button controll */
+.admin-button {
+  /* background-color: orange; */
+  display: flex;
+  flex-flow: column;
+  margin: 0 10vw;
+}
+
+.admin-single-button {
+  color: black;
+  margin: 10px 50px;
+  padding: 15px 20px;
+  background-color: orange;
+}
+
 /* ------------------------ header ------------------- */
 
 .hamburger {

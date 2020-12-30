@@ -2,6 +2,15 @@ import React from "react";
 import Footer from "../Footer";
 
 class AdminLogin extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.history.push("/adminPrice");
+  };
+
   render() {
     return (
       <div className="common_container">
@@ -42,6 +51,7 @@ class AdminLogin extends React.Component {
               }}
             />
             <button
+              onClick={this.handleSubmit}
               style={{
                 padding: "10px",
                 backgroundColor: "orangered",

@@ -3,6 +3,7 @@ import FAQ from "../pages/FAQs/FAQ";
 import CreateFAQ from "../pages/FAQs/CreateFAQ";
 import axios from "axios";
 import Footer from "../Footer";
+import AdminControlNav from "../AdminControlNav";
 
 class AdminFAQ extends React.Component {
   //call constructor
@@ -73,6 +74,7 @@ class AdminFAQ extends React.Component {
             <CreateFAQ submitItem={this.handleSubmitFAQ} />
           </div>
         </div>
+        <AdminControlNav />
         <Footer />
       </div>
     );
