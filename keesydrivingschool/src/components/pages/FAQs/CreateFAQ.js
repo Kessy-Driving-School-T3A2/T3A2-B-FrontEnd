@@ -45,3 +45,5 @@ class CreateFAQ extends Component {
     );
   }
 }
+
+export default CreateFAQ;
