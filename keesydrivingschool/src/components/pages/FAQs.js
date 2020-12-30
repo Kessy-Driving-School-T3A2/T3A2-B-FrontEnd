@@ -7,6 +7,8 @@ class FAQs extends React.Component {
     return (
       <div className="common_container">
         <h1>Frequently Asked Questions</h1>
+        <div>All faqs</div>
+        <ContactinfoBox />
         <Footer />
       </div>
     );
