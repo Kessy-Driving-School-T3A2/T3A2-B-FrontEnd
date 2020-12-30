@@ -26,7 +26,62 @@ class Contact extends React.Component {
               <h2>Email</h2>
               <p>info@keesydrivingschool.com.au</p>
             </div>
-            <div className="common_container-parts">form will be here</div>
+            <div className="common_container-parts">
+              <form
+                style={{
+                  display: "flex",
+                  flexFlow: "column"
+                }}
+              >
+                <input
+                  type="text"
+                  value="Name"
+                  style={{
+                    margin: "3px 10px",
+                    color: "black",
+                    backgroundColor: "#C4C4C4",
+                    border: "none",
+                    padding: "10px"
+                  }}
+                />
+                <input
+                  type="text"
+                  value="Phone"
+                  style={{
+                    margin: "3px 10px",
+                    color: "black",
+                    backgroundColor: "#C4C4C4",
+                    border: "none",
+                    padding: "10px"
+                  }}
+                />
+                <input
+                  type="text"
+                  value="Email"
+                  style={{
+                    margin: "3px 10px",
+                    color: "black",
+                    backgroundColor: "#C4C4C4",
+                    border: "none",
+                    padding: "10px"
+                  }}
+                />
+                <input
+                  type="text"
+                  value="Message"
+                  style={{
+                    margin: "3px 10px",
+                    color: "black",
+                    backgroundColor: "#C4C4C4",
+                    border: "none",
+                    padding: "10px 10px 30px 10px"
+                  }}
+                />
+                <button style={{ margin: "3px 10px", width: "40px" }}>
+                  Send
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <div className="common_container-one-part">
