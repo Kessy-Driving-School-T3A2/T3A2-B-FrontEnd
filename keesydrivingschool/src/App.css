@@ -41,6 +41,7 @@ h1 {
   background-color: #f17b2b;
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 
 .top-contact-link {
@@ -80,7 +81,6 @@ img {
 .home {
   margin-bottom: calc(1px + 1rem);
   position: relative;
-  z-index: -1;
   top: calc(140px + 1vw);
 }
 
@@ -109,7 +109,7 @@ p {
 .common_container {
   position: relative;
   top: calc(150px + 1rem);
-  z-index: -1;
+  /* z-index: -1; */
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;

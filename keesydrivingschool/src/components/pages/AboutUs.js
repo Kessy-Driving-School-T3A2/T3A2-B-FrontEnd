@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Footer";
 import ContactinfoBox from "../ContactinfoBox";
 import clientimage from "../../assets/clientimage.jpg";
+import { Link } from "react-router-dom";
 
 class AboutUs extends React.Component {
   render() {
@@ -37,9 +38,9 @@ class AboutUs extends React.Component {
                 practice with your parents or guardians. Our success rate speaks
                 for itself.
               </p>
-              <p>
+              <Link to="/contact" style={{ color: "orange" }}>
                 Contact Keesy Driving School to book your first lesson today.
-              </p>
+              </Link>
             </div>
           </div>
           <ContactinfoBox />
