@@ -216,6 +216,9 @@ p {
   padding: 15px 20px;
   background-color: orange;
 }
+.sideContactBox {
+  color: black;
+}
 
 /* create faq form */
 
