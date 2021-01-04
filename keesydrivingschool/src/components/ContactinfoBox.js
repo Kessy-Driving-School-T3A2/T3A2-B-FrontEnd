@@ -37,7 +37,7 @@ class ContactinfoBox extends React.Component {
             padding: "10px 15px"
           }}
         >
-          <Link to="/contact" style={{ color: "black" }}>
+          <Link to="/contact" className="sideContactBox">
             Book A Lesson Now
           </Link>
         </button>
