@@ -45,7 +45,6 @@ class AboutUs extends React.Component {
           </div>
           <ContactinfoBox />
         </div>
-
         <Footer />
       </div>
     );
