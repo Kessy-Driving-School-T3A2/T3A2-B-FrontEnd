@@ -99,6 +99,13 @@ img {
   background-color: #fff5ef;
 }
 
+.one-line {
+  display: flex;
+  justify-content: space-evenly;
+}
+.one-part > p {
+  width: 100px;
+}
 p {
   color: orange;
   padding-bottom: calc(5px + 1rem);
@@ -310,6 +317,10 @@ p {
 /*------------------------ media-query ------------------------- */
 
 @media all and (max-width: 1000px) {
+  /* .one-line {
+    display: flex;
+    flex-direction: row;
+  } */
   .bottompic-contact {
     padding-top: 8vw 0;
     height: 10vw;
@@ -344,6 +355,15 @@ p {
     visibility: visible;
     right: 40vw;
     top: -10px;
+  }
+
+  .one-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .one-part > p {
+    margin: auto;
   }
 
   .bottompic-contact {
