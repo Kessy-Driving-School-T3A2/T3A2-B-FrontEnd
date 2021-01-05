@@ -116,12 +116,11 @@ p {
 .common_container {
   position: relative;
   top: calc(150px + 1rem);
-  /* z-index: -1; */
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;
   margin: auto;
-  /* height: 100vh; */
+  align-items: stretch;
 }
 
 .aboutus-body {
@@ -157,10 +156,19 @@ p {
   color: black;
 }
 
+/* ----------- contactbox ------  */
+.box {
+  margin-top: 10px;
+  padding: 30px;
+  background-color: #fff8f8;
+  height: 190px;
+  width: 150px;
+  border: 1px solid black;
+}
+
 /* common-container */
 .common_container {
   display: flex;
-  /* padding: 0 30px; */
 }
 
 .common_container-body {
@@ -317,10 +325,6 @@ p {
 /*------------------------ media-query ------------------------- */
 
 @media all and (max-width: 1000px) {
-  /* .one-line {
-    display: flex;
-    flex-direction: row;
-  } */
   .bottompic-contact {
     padding-top: 8vw 0;
     height: 10vw;
@@ -332,10 +336,22 @@ p {
   }
 }
 
+@media all and (max-width: 900px) {
+  .aboutus-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .box {
+    width: 350px;
+    margin: auto;
+  }
+}
+
 @media all and (max-width: 800px) {
   .box {
     position: absolute;
-    bottom: 300px;
+    bottom: 30px;
   }
 
   .common_container-one-part-child {
