@@ -35,7 +35,7 @@ class AdminFAQ extends React.Component {
   handleSubmitFAQ = newFAQ => {
     // add the deployed server address here
     axios
-      .post("", {
+      .post("https://keesydrivingschool-backend.netlify.app/FAQ/", {
         question: newFAQ.question,
         answer: newFAQ.answer
       })
