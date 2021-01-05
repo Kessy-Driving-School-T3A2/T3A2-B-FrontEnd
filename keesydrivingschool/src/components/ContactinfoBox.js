@@ -4,17 +4,7 @@ import { Link } from "react-router-dom";
 class ContactinfoBox extends React.Component {
   render() {
     return (
-      <div
-        className="box"
-        style={{
-          marginTop: "10px",
-          padding: "30px",
-          backgroundColor: "#FFF8F8",
-          height: "190px",
-          width: "150px",
-          border: "1px solid black"
-        }}
-      >
+      <div className="box">
         <h3 style={{ textAlign: "left" }}>Kessy Driving School</h3>
         <ul
           style={{
