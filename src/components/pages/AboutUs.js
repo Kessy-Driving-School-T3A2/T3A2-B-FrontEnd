@@ -38,7 +38,7 @@ class AboutUs extends React.Component {
                 practice with your parents or guardians. Our success rate speaks
                 for itself.
               </p>
-              <Link to="/contact" style={{ color: "orange" }}>
+              <Link to="/contact" className="textLink">
                 Contact Keesy Driving School to book your first lesson today.
               </Link>
             </div>
