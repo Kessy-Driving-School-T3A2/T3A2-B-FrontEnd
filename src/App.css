@@ -342,22 +342,17 @@ p {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    height: 90vw;
+    height: 100vw;
   }
   .box {
-    width: 650px;
+    width: calc(60vw + 1rem);
+    height: auto;
+    margin: auto;
     margin-bottom: 10px;
-    margin-left: 10vw;
-    margin-top: auto;
   }
 }
 
 @media all and (max-width: 800px) {
-  .box {
-    position: absolute;
-    bottom: 30px;
-  }
-
   .common_container-one-part-child {
     display: flex;
     flex-direction: column;
@@ -390,11 +385,6 @@ p {
     height: 15vw;
   }
 
-  .box {
-    position: absolute;
-    bottom: 200px;
-  }
-
   .footer {
     height: 140px;
     font-size: 18px;
@@ -410,10 +400,6 @@ p {
     height: 20vw;
   }
 
-  .box {
-    position: absolute;
-    bottom: 40px;
-  }
   .footer {
     position: absolute;
     bottom: -130px;
@@ -442,11 +428,6 @@ p {
   .aboutus-details {
     width: 80vw;
     height: 10vw;
-  }
-
-  .box {
-    position: absolute;
-    bottom: -90px;
   }
 
   .bottompic-contact {
