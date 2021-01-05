@@ -38,7 +38,6 @@ class Home extends React.Component {
             <Link to="/contact" className="item" style={{ color: "orange" }}>
               BOOK LESSON NOW
             </Link>
-            {/* <p style={{ color: "orange" }}>BOOK LESSON NOW</p> */}
           </div>
         </div>
         <div className="home-body">
