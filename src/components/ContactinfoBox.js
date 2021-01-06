@@ -17,7 +17,15 @@ class ContactinfoBox extends React.Component {
           <li style={{ padding: "5px 0" }}>Office Location</li>
           <li style={{ padding: "5px 0" }}>Number</li>
           <li style={{ padding: "5px 0" }}>Info@kessydrivingschool.com</li>
-          <li style={{ padding: "5px 0" }}>Facebook</li>
+          <li style={{ padding: "5px 0" }}>
+            <Link
+              to={{ pathname: "https://www.facebook.com/keesydrivingschool" }}
+              target="_blank"
+              style={{ color: "orange" }}
+            >
+              Facebook
+            </Link>
+          </li>
         </ul>
         <button
           style={{
