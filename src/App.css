@@ -162,12 +162,24 @@ p {
 /* ----------- contactbox ------  */
 .box {
   margin-top: 10px;
-
   padding: 30px;
   background-color: #fff8f8;
-  height: calc(20vw + 1rem);
+  height: calc(18vw + 1rem);
   width: 150px;
   border: 1px solid black;
+}
+
+.box > button {
+  margin-top: 10px;
+  background-color: #fd7a02;
+  border: none;
+  padding: 10px 15px;
+}
+.box > ul {
+  font-size: 10px;
+  padding: 0px 5px;
+  text-align: left;
+  color: orange;
 }
 
 /* common-container */
@@ -349,7 +361,6 @@ p {
   }
   .box {
     width: calc(60vw + 1rem);
-
     margin: auto;
     margin-bottom: 10px;
   }
@@ -364,7 +375,10 @@ p {
 
 @media all and (max-width: 700px) {
   .box {
-    height: calc(22vw + 1rem);
+    height: calc(35vw + 1rem);
+  }
+  .box > button {
+    margin-top: 0;
   }
   .aboutus-body {
     display: flex;
