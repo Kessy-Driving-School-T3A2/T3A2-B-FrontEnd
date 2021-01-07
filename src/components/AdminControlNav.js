@@ -5,10 +5,10 @@ class AdminControlNav extends React.Component {
   render() {
     return (
       <div className="admin-button">
-        <Link to="/adminFAQ" className="admin-single-button">
+        <Link to="/FAQ/admin" className="admin-single-button">
           Admin FAQs
         </Link>
-        <Link to="/adminPrice" className="admin-single-button">
+        <Link to="/Prices/admin" className="admin-single-button">
           Admin Prices & Packages
         </Link>
         <Link to="/" className="admin-single-button">

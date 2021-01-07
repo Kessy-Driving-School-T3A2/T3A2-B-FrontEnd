@@ -172,6 +172,11 @@ p {
   padding: 0 calc(35px + 1rem);
 }
 
+.onefaq {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ----------- contactbox ------  */
 .box {
   margin-top: 10px;

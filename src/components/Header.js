@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="main-header">
       <div className="top-contact-link">
-        <Link to="/adminLogin" className="item">
+        <Link to="/Admin/login" className="item">
           Admin Login
         </Link>
         | 0419 421 848 info@keesydrivingschool.com.au

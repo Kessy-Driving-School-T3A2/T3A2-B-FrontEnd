@@ -5,7 +5,7 @@ class FAQ extends Component {
     return (
       <div className="onefaq">
         <h4 className="onefaq-parts">{this.props.faq.question}</h4>
-        <p className="onefaq-parts">{this.props.answer}</p>
+        <p className="onefaq-parts">{this.props.faq.answer}</p>
       </div>
     );
   }
