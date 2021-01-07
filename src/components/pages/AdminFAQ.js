@@ -19,10 +19,10 @@ class AdminFAQ extends React.Component {
   getAllFAQs = () => {
     // add the deployed server address here
     axios
-      .get("")
+      .get("https://keesydrivingschool-backend.herokuapp.com/faq")
       .then(res => {
         console.log(res.data);
-        this.setState({ posts: res.data });
+        this.setState({ faqs: res.data });
       })
       .catch();
   };
@@ -35,7 +35,7 @@ class AdminFAQ extends React.Component {
   handleSubmitFAQ = newFAQ => {
     // add the deployed server address here
     axios
-      .post("https://keesydrivingschool-backend.netlify.app/FAQ/", {
+      .post("", {
         question: newFAQ.question,
         answer: newFAQ.answer
       })
@@ -65,7 +65,7 @@ class AdminFAQ extends React.Component {
         <div className="allfaqs">
           <div className="allfaqs_parts">
             {this.state.faqs.length ? (
-              this.renderAllFAQs
+              this.renderAllFAQs()
             ) : (
               <h3>Loading FAQs...</h3>
             )}

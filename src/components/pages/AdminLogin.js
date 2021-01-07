@@ -8,7 +8,7 @@ class AdminLogin extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.history.push("/adminPrice");
+    this.props.history.push("/Prices/admin");
   };
 
   render() {
