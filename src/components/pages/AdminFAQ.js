@@ -75,7 +75,15 @@ class AdminFAQ extends React.Component {
               <AdminControlNav />
             </div>
           </div>
-          <div className="allfaqs_parts">
+          <div
+            className="allfaqs_parts"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "left"
+            }}
+          >
+            <h1>Add New FAQ</h1>
             <CreateFAQ submitItem={this.handleSubmitFAQ} />
           </div>
         </div>
