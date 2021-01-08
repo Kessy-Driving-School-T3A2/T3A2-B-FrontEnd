@@ -175,6 +175,14 @@ p {
 .onefaq {
   display: flex;
   flex-direction: column;
+  text-align: left;
+
+  margin: calc(15px + 1rem);
+}
+
+.allfaqs {
+}
+.allfaqs_parts_child {
 }
 
 /* ----------- contactbox ------  */

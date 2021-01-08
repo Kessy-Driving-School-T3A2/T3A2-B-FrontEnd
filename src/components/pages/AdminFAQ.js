@@ -64,17 +64,21 @@ class AdminFAQ extends React.Component {
         <h1>AdminFAQs</h1>
         <div className="allfaqs">
           <div className="allfaqs_parts">
-            {this.state.faqs.length ? (
-              this.renderAllFAQs()
-            ) : (
-              <h3>Loading FAQs...</h3>
-            )}
+            <div className="allfaqs_parts_child">
+              {this.state.faqs.length ? (
+                this.renderAllFAQs()
+              ) : (
+                <h3>Loading FAQs...</h3>
+              )}
+            </div>
+            <div className="allfaqs_parts_child">
+              <AdminControlNav />
+            </div>
           </div>
           <div className="allfaqs_parts">
             <CreateFAQ submitItem={this.handleSubmitFAQ} />
           </div>
         </div>
-        <AdminControlNav />
 
         <Footer />
       </div>
