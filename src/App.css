@@ -174,7 +174,24 @@ p {
 
 .onefaq {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.onefaq-body-parts {
+  display: flex;
   flex-direction: column;
+  text-align: left;
+  margin: calc(15px + 1rem);
+}
+.allfaqs {
+  margin: 0 calc(15px + 1rem);
+}
+
+.allfaqs_parts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
 }
 
 /* ----------- contactbox ------  */
@@ -368,6 +385,13 @@ p {
     font-size: 20px;
     padding: 10px 5px;
   }
+
+  .allfaqs_parts {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly;
+    border-bottom: 1px solid black; */
+  }
 }
 
 @media all and (max-width: 900px) {
@@ -456,6 +480,16 @@ p {
     padding: 10px 5px;
     position: absolute;
     bottom: -100px;
+  }
+
+  .onefaq {
+    display: flex;
+    flex-direction: column;
+  }
+  .one-faq-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
