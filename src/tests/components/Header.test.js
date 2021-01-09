@@ -11,7 +11,7 @@ describe("Header", () => {
   });
   test("renders admin login link", () => {
     expect(wrapper.find(".item").get(0).props.children).toBe("Admin Login");
-    expect(wrapper.find(".item").get(0).props.to).toBe("/adminLogin");
+    expect(wrapper.find(".item").get(0).props.to).toBe("/Admin/login");
   });
   test("renders Home on clicking logo", () => {
     expect(wrapper.find(".item").get(1).props.children).toStrictEqual(

@@ -23,9 +23,6 @@ describe("ContactinfoBox", () => {
       "Info@kessydrivingschool.com"
     );
   });
-  test("renders the facebook link", () => {
-    expect(wrapper.find("li").get(3).props.children).toBe("Facebook");
-  });
 
   test("renders button link to Contact Us page", () => {
     expect(wrapper.find(".sideContactBox").text()).toBe("Book A Lesson Now");

@@ -12,7 +12,7 @@ describe("Admin Control navigation", () => {
       "Admin FAQs"
     );
     expect(wrapper.find(".admin-single-button").get(0).props.to).toBe(
-      "/adminFAQ"
+      "/FAQ/admin"
     );
   });
   test("renders admin prices & packages link", () => {
@@ -20,7 +20,7 @@ describe("Admin Control navigation", () => {
       "Admin Prices & Packages"
     );
     expect(wrapper.find(".admin-single-button").get(1).props.to).toBe(
-      "/adminPrice"
+      "/Prices/admin"
     );
   });
   test("renders admin logout link", () => {
