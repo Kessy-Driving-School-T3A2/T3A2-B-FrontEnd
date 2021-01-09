@@ -164,7 +164,7 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 80vh;
+  height: auto;
 }
 .faq-page-body-parts {
   margin: auto;

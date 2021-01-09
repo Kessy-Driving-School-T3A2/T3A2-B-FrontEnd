@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../Footer";
 import axios from "axios";
 import ContactinfoBox from "../ContactinfoBox";
-import FAQ from "./FAQs/FAQ";
+import FAQ_user from "./FAQ_user";
 
 class FAQs extends React.Component {
   //call constructor
@@ -33,7 +33,7 @@ class FAQs extends React.Component {
   //render all faqs list with the new one
   renderAllFAQs = () => {
     return this.state.faqs.map(faq => {
-      return <FAQ key={faq._id} faq={faq} />;
+      return <FAQ_user key={faq._id} faq={faq} />;
     });
   };
   render() {
@@ -42,22 +42,21 @@ class FAQs extends React.Component {
         <h1>Frequently Asked Questions</h1>
         <div className="faqs-page-body">
           <div className="faq-page-body-parts">
-            <div className="QA">
-              <div className="allfaqs_parts_child">
-                {this.state.faqs.length ? (
-                  this.renderAllFAQs()
-                ) : (
-                  <h3>Loading FAQs...</h3>
-                )}
-              </div>
+            <div className="allfaqs_parts_child">
+              {this.state.faqs.length ? (
+                this.renderAllFAQs()
+              ) : (
+                <h3>Loading FAQs...</h3>
+              )}
             </div>
           </div>
           <div className="faq-page-body-parts">
             <ContactinfoBox />
           </div>
         </div>
-
-        <Footer />
+        <div className="faqs-page-body">
+          <Footer />
+        </div>
       </div>
     );
   }
