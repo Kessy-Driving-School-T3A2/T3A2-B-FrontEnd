@@ -476,6 +476,9 @@ p {
 }
 
 @media all and (max-width: 600px) {
+  .common_container {
+    height: 100vh;
+  }
   .header-right-menu {
     height: 0;
     width: 0;
@@ -517,6 +520,24 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  .main-price-admin {
+    display: flex;
+    flex-direction: column;
+  }
+  .prices_admin {
+    justify-content: end;
+  }
+  .onePrice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  .onePrice > button {
+    width: 10vw;
+    align-self: center;
   }
 }
 
