@@ -3,7 +3,7 @@ import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import AdminControlNav from "../AdminControlNav";
 import axios from "axios";
-import Price_user from "./Price_user";
+import Price from "./Price";
 
 class AdminPrice extends React.Component {
   //call constructor
@@ -34,7 +34,7 @@ class AdminPrice extends React.Component {
   //render all prices list with the new one
   renderAllPrices = () => {
     return this.state.prices.map(price => {
-      return <Price_user key={price._id} price={price} />;
+      return <Price key={price._id} price={price} />;
     });
   };
 
