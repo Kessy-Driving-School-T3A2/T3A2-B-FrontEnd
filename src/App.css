@@ -295,6 +295,16 @@ p {
   padding: 10px 15px;
 }
 
+/*------------------------ prices and packages-------------------------------- */
+.onePrice-parts {
+  background-color: #f8c09a;
+  padding: 10px;
+  margin: auto;
+  /* margin-bottom: 2px; */
+  width: 150px;
+  color: black;
+}
+
 /* ------------------------ header ------------------- */
 
 .hamburger {

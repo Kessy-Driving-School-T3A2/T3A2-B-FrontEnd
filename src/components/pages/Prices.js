@@ -1,13 +1,33 @@
 import React from "react";
 import Footer from "../Footer";
-import ContactinfoBox from "../ContactinfoBox";
 
 class Prices extends React.Component {
   render() {
     return (
       <div className="common_container">
-        <h1>Prices & Packages</h1>
-        <Footer />
+        <div>
+          <h1>Prices & Packages</h1>
+          <p>some text</p>
+          <div className="price_box"></div>
+        </div>
+        <div>
+          <h2>SINGLE LESSON</h2>
+          <p>some text</p>
+          <div className="price_box"></div>
+        </div>
+        <div>
+          <h2>PACKAGES</h2>
+          <p>some text</p>
+          <div className="price_box"></div>
+        </div>
+        <div>
+          <h2>DRIVE TEST</h2>
+          <p>some text</p>
+          <div className="price_box"></div>
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     );
   }
