@@ -41,17 +41,22 @@ class AdminPrice extends React.Component {
   render() {
     return (
       <div className="common_container">
-        <div className="prices_admin">
-          {this.state.prices.length ? (
-            this.renderAllPrices()
-          ) : (
-            <h3>Loading Prices and Packages...</h3>
-          )}
-        </div>
         <h1>AdminPrices</h1>
-        <AdminControlNav />
+        <div className="main-price-admin">
+          <div className="prices_admin">
+            {this.state.prices.length ? (
+              this.renderAllPrices()
+            ) : (
+              <h3>Loading Prices and Packages...</h3>
+            )}
+          </div>
 
-        {/* <Footer /> */}
+          <div>
+            <AdminControlNav />
+          </div>
+        </div>
+
+        <Footer />
       </div>
     );
   }
