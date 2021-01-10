@@ -7,6 +7,16 @@ class Price_user extends Component {
         <div className="onePrice-body-parts onePrice-parts">
           {this.props.price.lesson} : $ {this.props.price.price}
         </div>
+        <button
+          style={{
+            backgroundColor: "orange",
+            border: "none",
+            padding: "10px",
+            margin: "10px 30px"
+          }}
+        >
+          Edit
+        </button>
       </div>
     );
   }
