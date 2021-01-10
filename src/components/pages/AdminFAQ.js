@@ -76,7 +76,6 @@ class AdminFAQ extends React.Component {
             </div>
           </div>
           <div
-            className="allfaqs_parts"
             style={{
               display: "flex",
               flexDirection: "column",

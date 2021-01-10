@@ -478,6 +478,7 @@ p {
 @media all and (max-width: 600px) {
   .common_container {
     height: 100vh;
+    max-height: 100%;
   }
   .header-right-menu {
     height: 0;
@@ -511,6 +512,10 @@ p {
     position: absolute;
     bottom: -100px;
   }
+  .allfaqs_parts {
+    display: flex;
+    flex-direction: column;
+  }
 
   .onefaq {
     display: flex;
@@ -525,6 +530,7 @@ p {
   .main-price-admin {
     display: flex;
     flex-direction: column;
+    height: 120%;
   }
   .prices_admin {
     justify-content: end;
@@ -539,6 +545,10 @@ p {
     width: 10vw;
     align-self: center;
   }
+
+  .form-field {
+    margin: 6px 0;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -549,7 +559,7 @@ p {
 
   .footer {
     position: absolute;
-    bottom: -130px;
+    bottom: -110vh;
   }
   .box {
     height: calc(33vw + 1rem);
@@ -566,15 +576,32 @@ p {
     padding-top: 7vw 0;
     height: 25vw;
   }
+  .form-field {
+    margin: 3px 0;
+  }
 
   .footer {
-    position: absolute;
-    bottom: -250px;
+    position: static;
+    bottom: 0;
     height: 125px;
     font-size: 13px;
     padding: 8px 5px;
   }
   .box {
     height: calc(35vw + 1rem);
+  }
+  .main-price-admin {
+    height: 135%;
+  }
+  .onePrice-body-parts {
+    font-size: 15px;
+  }
+  .admin-button > a {
+    font-size: 15px;
+  }
+  .allfaqs_parts > .allfaqs_parts_child > .admin-button > a {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 10px;
   }
 }
