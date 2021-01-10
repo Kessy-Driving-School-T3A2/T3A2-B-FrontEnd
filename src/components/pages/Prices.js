@@ -48,15 +48,25 @@ class Prices extends React.Component {
 
   render() {
     return (
-      <div className="common_container">
-        <div>
-          <h1>Prices & Packages</h1>
-          <p>some text</p>
-          <div className="price_box"></div>
+      <div className="common_container price_user">
+        <div className="price_type">
+          <h1 style={{ textAlign: "center" }}>Prices & Packages</h1>
+          <p style={{ color: "black", padding: "20px 0" }}>
+            Our lesson prices and packages are listed below. Please click the
+            Book Now button to book your lesson. If you have any questions,
+            please call Kees on{" "}
+            <mark style={{ color: "orange", backgroundColor: "black" }}>
+              0419 421 848
+            </mark>
+            .
+          </p>
         </div>
         <div>
           <h2>SINGLE LESSON</h2>
-          <p>some text</p>
+          <p style={{ color: "black", padding: "30px calc(70px + 1rem)" }}>
+            A single lesson could be used to assess your ability and determine
+            if you are ready for your drive test.
+          </p>
           <div className="price_box">
             {this.state.prices.length ? (
               this.renderAllSingleLessonPrices()
@@ -67,7 +77,12 @@ class Prices extends React.Component {
         </div>
         <div>
           <h2>PACKAGES</h2>
-          <p>some text</p>
+          <p style={{ color: "black", padding: "30px calc(70px + 1rem)" }}>
+            Packages save you money. You can have 6 lessons which will get you
+            ready for mum and dad to take over, have 6 lessons to prepare you
+            for your test or 12 lessons that will get you comprehensively
+            prepared.
+          </p>
           <div className="price_box">
             {this.state.prices.length ? (
               this.renderAllPackageLessonPrices()
@@ -78,7 +93,10 @@ class Prices extends React.Component {
         </div>
         <div>
           <h2>DRIVE TEST</h2>
-          <p>some text</p>
+          <p style={{ color: "black", padding: "30px calc(70px + 1rem)" }}>
+            Drive Tests are done from Dandenong & Pakenham VicRoads Testing
+            Sites
+          </p>
           <div className="price_box">
             {this.state.prices.length ? (
               this.renderAllDriveTestsPrices()
@@ -87,7 +105,7 @@ class Prices extends React.Component {
             )}
           </div>
         </div>
-        <div>
+        <div style={{ textAlign: "center", position: "static" }}>
           <Footer />
         </div>
       </div>
