@@ -273,15 +273,16 @@ p {
   /* background-color: orange; */
   display: flex;
   flex-flow: column;
-  margin: 0 10vw;
+  margin: 0 2vw;
 }
 
 .admin-single-button {
   color: black;
-  margin: 10px 50px;
+  margin: 10px 5px;
   padding: 15px 20px;
   background-color: orange;
 }
+
 .sideContactBox {
   color: black;
 }
@@ -296,13 +297,29 @@ p {
 }
 
 /*------------------------ prices and packages-------------------------------- */
+.onePrice {
+  display: flex;
+  justify-content: center;
+}
+
+.onePrice-body-parts {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
 .onePrice-parts {
   background-color: #f8c09a;
   padding: 10px;
-  margin: auto;
-  /* margin-bottom: 2px; */
-  width: 150px;
+  width: 250px;
   color: black;
+  justify-content: space-evenly;
+}
+
+.main-price-admin {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
 }
 
 /* ------------------------ header ------------------- */
@@ -398,9 +415,7 @@ p {
 
   .allfaqs_parts {
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly;
-    border-bottom: 1px solid black; */
+    flex-direction: row;
   }
 }
 

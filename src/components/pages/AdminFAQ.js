@@ -72,7 +72,7 @@ class AdminFAQ extends React.Component {
               )}
             </div>
             <div className="allfaqs_parts_child">
-              <AdminControlNav />
+              <AdminControlNav className="width" />
             </div>
           </div>
           <div

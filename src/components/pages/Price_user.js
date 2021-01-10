@@ -4,23 +4,15 @@ class Price_user extends Component {
   render() {
     return (
       <div className="onePrice">
-        <div className="onePrice-body-parts">
-          <p
-            className="onePrice-parts"
-            style={{ borderBottom: "1px solid black" }}
-          >
-            {this.props.price.lesson}
-          </p>
-          <p className="onePrice-parts" style={{ marginBottom: "5px" }}>
-            $ {this.props.price.price}
-          </p>
+        <div className="onePrice-body-parts onePrice-parts">
+          {this.props.price.lesson} : $ {this.props.price.price}
         </div>
         <button
           style={{
             backgroundColor: "orange",
             border: "none",
-            padding: "5px 10px",
-            marginBottom: "10px"
+            padding: "10px",
+            margin: "10px 30px"
           }}
         >
           Edit
