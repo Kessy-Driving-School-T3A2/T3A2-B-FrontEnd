@@ -300,6 +300,7 @@ p {
 .onePrice {
   display: flex;
   justify-content: center;
+  margin-bottom: calc(20px + 1rem);
 }
 
 .onePrice-body-parts {
