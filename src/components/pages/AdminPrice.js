@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../Footer";
-import { Link } from "react-router-dom";
 import AdminControlNav from "../AdminControlNav";
 import axios from "axios";
 import Price from "./Price";

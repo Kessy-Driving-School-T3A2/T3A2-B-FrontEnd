@@ -1,5 +1,4 @@
 import React from "react";
-import bottompic from "../assets/bottompic.jpg";
 
 class Bottombanner extends React.Component {
   render() {

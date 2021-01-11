@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../Footer";
-import ContactinfoBox from "../ContactinfoBox";
 import service from "../../assets/service.jpg";
 
 class Contact extends React.Component {
