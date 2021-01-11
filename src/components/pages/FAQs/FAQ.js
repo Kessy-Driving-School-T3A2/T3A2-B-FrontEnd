@@ -44,6 +44,12 @@ class FAQ extends Component {
   };
 
   render() {
+    const faq_button = {
+      backgroundColor: "orange",
+      border: "none",
+      padding: "5px 10px",
+      marginBottom: "10px"
+    };
     return (
       <div className="onefaq">
         <div className="onefaq-body-parts">
@@ -55,27 +61,10 @@ class FAQ extends Component {
           ) : (
             this.renderFAQ()
           )}
-          <button
-            style={{
-              backgroundColor: "orange",
-              border: "none",
-              padding: "5px 10px",
-              marginBottom: "10px"
-            }}
-            onClick={this.handleEdit}
-          >
+          <button style={faq_button} onClick={this.handleEdit}>
             {this.state.isEditMode ? "Cancel" : "Edit"}
           </button>
-          <button
-            style={{
-              backgroundColor: "orange",
-              border: "none",
-              padding: "5px 10px",
-              marginBottom: "10px"
-            }}
-          >
-            Delete
-          </button>
+          <button style={faq_button}>Delete</button>
         </div>
       </div>
     );

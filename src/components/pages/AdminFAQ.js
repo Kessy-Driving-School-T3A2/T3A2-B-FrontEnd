@@ -1,9 +1,9 @@
 import React from "react";
 import FAQ from "../pages/FAQs/FAQ";
 import CreateFAQ from "../pages/FAQs/CreateFAQ";
-import axios from "axios";
 import Footer from "../Footer";
 import AdminControlNav from "../AdminControlNav";
+import BackendServer from "../../apis/BackendServer";
 
 class AdminFAQ extends React.Component {
   //call constructor
@@ -18,8 +18,7 @@ class AdminFAQ extends React.Component {
   //get all faqs from our API and update the state with it
   getAllFAQs = () => {
     // add the deployed server address here
-    axios
-      .get("https://keesydrivingschool-backend.herokuapp.com/faq")
+    BackendServer.get("/faq")
       .then(res => {
         console.log(res.data);
         this.setState({ faqs: res.data });
@@ -34,19 +33,18 @@ class AdminFAQ extends React.Component {
   //handleSubmitFaq function: go to api, create a new faq then update the allfaq array and set the state of allfaqs to updatedfaqs
   handleSubmitFAQ = newFAQ => {
     // add the deployed server address here
-    axios
-      .post(
-        "http://localhost:3000/faq/admin",
-        {
-          question: newFAQ.question,
-          answer: newFAQ.answer
-        },
-        {
-          headers: {
-            "x-access-token": localStorage.getItem("keesy")
-          }
+    BackendServer.post(
+      "/faq/admin",
+      {
+        question: newFAQ.question,
+        answer: newFAQ.answer
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("keesy")
         }
-      )
+      }
+    )
       .then(res => {
         //create a variable for updated faqs list array
         const updatesFAQs = this.state.faqs.concate(res.data);
