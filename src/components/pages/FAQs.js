@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../Footer";
-import axios from "axios";
+import BackendServer from "../../apis/BackendServer";
 import ContactinfoBox from "../ContactinfoBox";
 import FAQ_user from "./FAQ_user";
 
@@ -17,8 +17,7 @@ class FAQs extends React.Component {
   //get all faqs from our API and update the state with it
   getAllFAQs = () => {
     // add the deployed server address here
-    axios
-      .get("https://keesydrivingschool-backend.herokuapp.com/faq")
+    BackendServer.get("/faq")
       .then(res => {
         console.log(res.data);
         this.setState({ faqs: res.data });

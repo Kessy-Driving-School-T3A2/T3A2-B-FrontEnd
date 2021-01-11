@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
-import axios from "axios";
+// import axios from "axios";
+import BackendServer from "../../apis/BackendServer";
 
 class AdminLogin extends React.Component {
   constructor(props) {
@@ -13,16 +14,14 @@ class AdminLogin extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    axios
-      .post("http://localhost:3000/admin/signin", {
-        username: this.state.username,
-        password: this.state.password
-      })
-      .then(response => {
-        console.log(response.data);
-        localStorage.setItem("keesy", response.data.accessToken);
-        this.props.history.push("/FAQ/admin");
-      });
+    BackendServer.post("/admin/signin", {
+      username: this.state.username,
+      password: this.state.password
+    }).then(response => {
+      console.log(response.data);
+      localStorage.setItem("keesy", response.data.accessToken);
+      this.props.history.push("/FAQ/admin");
+    });
   };
 
   handleUsernameChange = e => {

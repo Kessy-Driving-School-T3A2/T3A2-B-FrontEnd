@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "../Footer";
-import axios from "axios";
+import BackendServer from "../../apis/BackendServer";
 import PriceUser from "./Price_user";
 
 class Prices extends React.Component {
@@ -15,8 +15,7 @@ class Prices extends React.Component {
   //get all prices from our API and update the state with it
   getAllPrices = () => {
     // add the deployed server address here
-    axios
-      .get("https://keesydrivingschool-backend.herokuapp.com/prices")
+    BackendServer.get("/prices")
       .then(res => {
         console.log(res.data);
         this.setState({ prices: res.data });
