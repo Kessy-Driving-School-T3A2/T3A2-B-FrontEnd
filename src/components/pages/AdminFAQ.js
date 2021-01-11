@@ -35,10 +35,18 @@ class AdminFAQ extends React.Component {
   handleSubmitFAQ = newFAQ => {
     // add the deployed server address here
     axios
-      .post("https://keesydrivingschool-backend.herokuapp.com/faq/admin", {
-        question: newFAQ.question,
-        answer: newFAQ.answer
-      })
+      .post(
+        "http://localhost:3000/faq/admin",
+        {
+          question: newFAQ.question,
+          answer: newFAQ.answer
+        },
+        {
+          headers: {
+            "x-access-token": localStorage.getItem("keesy")
+          }
+        }
+      )
       .then(res => {
         //create a variable for updated faqs list array
         const updatesFAQs = this.state.faqs.concate(res.data);

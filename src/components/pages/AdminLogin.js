@@ -1,14 +1,36 @@
 import React from "react";
 import Footer from "../Footer";
+import axios from "axios";
 
 class AdminLogin extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      username: "",
+      password: ""
+    };
   }
 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.history.push("/Prices/admin");
+    axios
+      .post("http://localhost:3000/admin/signin", {
+        username: this.state.username,
+        password: this.state.password
+      })
+      .then(response => {
+        console.log(response.data);
+        localStorage.setItem("keesy", response.data.accessToken);
+        this.props.history.push("/FAQ/admin");
+      });
+  };
+
+  handleUsernameChange = e => {
+    this.setState({ username: e.target.value });
+  };
+
+  handlePasswordChange = e => {
+    this.setState({ password: e.target.value });
   };
 
   render() {
@@ -31,6 +53,7 @@ class AdminLogin extends React.Component {
             <input
               type="text"
               placeholder="User Name"
+              onChange={this.handleUsernameChange}
               style={{
                 padding: "10px",
                 marginBottom: "5px",
@@ -38,10 +61,12 @@ class AdminLogin extends React.Component {
                 border: "1px solid #C4C4C4",
                 borderRadius: "8px"
               }}
+              value={this.state.username}
             />
             <input
               type="text"
               placeholder="Password"
+              onChange={this.handlePasswordChange}
               style={{
                 padding: "10px",
                 marginBottom: "5px",
@@ -49,6 +74,7 @@ class AdminLogin extends React.Component {
                 border: "1px solid #C4C4C4",
                 borderRadius: "8px"
               }}
+              value={this.state.password}
             />
             <button
               onClick={this.handleSubmit}
