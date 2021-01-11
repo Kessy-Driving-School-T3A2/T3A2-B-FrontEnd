@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import axios from "axios";
-import Price_user from "./Price_user";
+import PriceUser from "./Price_user";
 
 class Prices extends React.Component {
   constructor(props) {
@@ -31,18 +31,18 @@ class Prices extends React.Component {
   //render all prices list
   renderAllSingleLessonPrices = () => {
     return this.state.prices.slice(0, 2).map(price => {
-      return <Price_user key={price._id} price={price} />;
+      return <PriceUser key={price._id} price={price} />;
     });
   };
 
   renderAllPackageLessonPrices = () => {
     return this.state.prices.slice(2, 4).map(price => {
-      return <Price_user key={price._id} price={price} />;
+      return <PriceUser key={price._id} price={price} />;
     });
   };
   renderAllDriveTestsPrices = () => {
     return this.state.prices.slice(4, 7).map(price => {
-      return <Price_user key={price._id} price={price} />;
+      return <PriceUser key={price._id} price={price} />;
     });
   };
 
