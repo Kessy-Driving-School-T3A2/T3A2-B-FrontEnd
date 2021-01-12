@@ -3,26 +3,35 @@ import React, { Component } from "react";
 class Review extends Component {
   renderReview = () => {
     return (
-      <div className="onefaq-body-parts">
-        <h4
-          className="onefaq-parts"
-          style={{
-            backgroundColor: "rgba(247, 165, 89, 0.37)",
-            padding: "10px",
-            marginBottom: "2px"
-          }}
-        >
-          Q. {this.props.review.name}
-        </h4>
+      <div
+        className="onefaq-body-parts"
+        style={{ borderBottom: "1px solid black" }}
+      >
         <p
           className="onefaq-parts"
           style={{
-            backgroundColor: "rgba(247, 160, 89, 0.37)",
+            // backgroundColor: "rgba(247, 160, 89, 0.37)",
             padding: "10px",
-            color: "black"
+            color: "black",
+            display: "flex",
+            justifyContent: "center",
+            textTransform: "capitalize"
           }}
         >
-          A. {this.props.review.review}
+          {this.props.review.review}
+        </p>
+        <p
+          className="onefaq-parts"
+          style={{
+            padding: "10px",
+            marginBottom: "2px",
+            display: "flex",
+            justifyContent: "center",
+            textTransform: "capitalize",
+            color: "rgb(204, 82, 0)"
+          }}
+        >
+          {this.props.review.name}
         </p>
       </div>
     );

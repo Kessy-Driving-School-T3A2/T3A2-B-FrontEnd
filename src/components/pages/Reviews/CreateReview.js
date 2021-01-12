@@ -35,14 +35,14 @@ class CreateReview extends Component {
         }}
       >
         <input
-          placeholder="Add Question"
+          placeholder="Add Your Name"
           type="text"
           value={this.state.name}
           onChange={this.handleNameChange}
           className="form-field"
         />
         <input
-          placeholder="Add Answer"
+          placeholder="Add Your Review"
           type="text"
           value={this.state.review}
           onChange={this.handleReviewChange}
@@ -51,7 +51,7 @@ class CreateReview extends Component {
         />
         <input
           type="submit"
-          value="Add FAQ"
+          value="Add Review"
           onClick={this.handleSubmit}
           className="form-field"
           style={{ backgroundColor: "#f47b2a" }}
