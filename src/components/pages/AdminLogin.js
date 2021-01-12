@@ -1,6 +1,5 @@
 import React from "react";
 import Footer from "../Footer";
-// import axios from "axios";
 import BackendServer from "../../apis/BackendServer";
 
 class AdminLogin extends React.Component {
@@ -33,6 +32,22 @@ class AdminLogin extends React.Component {
   };
 
   render() {
+    const loginField = {
+      padding: "10px",
+      marginBottom: "5px",
+      backgroundColor: "#C4C4C4",
+      border: "1px solid #C4C4C4",
+      borderRadius: "8px"
+    };
+
+    const loginButton = {
+      padding: "10px",
+      backgroundColor: "orangered",
+      border: "none",
+      marginTop: "10px",
+      borderRadius: "8px"
+    };
+
     return (
       <div className="common_container">
         <h1>AdminLogin</h1>
@@ -53,38 +68,17 @@ class AdminLogin extends React.Component {
               type="text"
               placeholder="User Name"
               onChange={this.handleUsernameChange}
-              style={{
-                padding: "10px",
-                marginBottom: "5px",
-                backgroundColor: "#C4C4C4",
-                border: "1px solid #C4C4C4",
-                borderRadius: "8px"
-              }}
+              style={loginField}
               value={this.state.username}
             />
             <input
               type="text"
               placeholder="Password"
               onChange={this.handlePasswordChange}
-              style={{
-                padding: "10px",
-                marginBottom: "5px",
-                backgroundColor: "#C4C4C4",
-                border: "1px solid #C4C4C4",
-                borderRadius: "8px"
-              }}
+              style={loginField}
               value={this.state.password}
             />
-            <button
-              onClick={this.handleSubmit}
-              style={{
-                padding: "10px",
-                backgroundColor: "orangered",
-                border: "none",
-                marginTop: "10px",
-                borderRadius: "8px"
-              }}
-            >
+            <button onClick={this.handleSubmit} style={loginButton}>
               Submit
             </button>
           </form>

@@ -1,27 +1,27 @@
 import React, { Component } from "react";
 
-class CreateFAQ extends Component {
+class CreateReview extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: "",
-      answer: ""
+      name: "",
+      review: ""
     };
   }
 
-  handleQuestionChange = e => {
-    this.setState({ question: e.target.value });
+  handleNameChange = e => {
+    this.setState({ name: e.target.value });
   };
 
-  handleAnswerChange = e => {
-    this.setState({ answer: e.target.value });
+  handleReviewChange = e => {
+    this.setState({ review: e.target.value });
   };
 
   handleSubmit = () => {
     this.props.submitItem(this.state);
     this.setState({
-      question: "",
-      answer: ""
+      name: "",
+      review: ""
     });
   };
 
@@ -37,15 +37,15 @@ class CreateFAQ extends Component {
         <input
           placeholder="Add Question"
           type="text"
-          value={this.state.question}
-          onChange={this.handleQuestionChange}
+          value={this.state.name}
+          onChange={this.handleNameChange}
           className="form-field"
         />
         <input
           placeholder="Add Answer"
           type="text"
-          value={this.state.answer}
-          onChange={this.handleAnswerChange}
+          value={this.state.review}
+          onChange={this.handleReviewChange}
           className="form-field"
           style={{ paddingBottom: "30px" }}
         />
@@ -61,4 +61,4 @@ class CreateFAQ extends Component {
   }
 }
 
-export default CreateFAQ;
+export default CreateReview;
