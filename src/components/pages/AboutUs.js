@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Footer";
 import ContactinfoBox from "../ContactinfoBox";
-import clientimage from "../../assets/clientimage.jpg";
+// import clientimage from "../../assets/clientimage.jpg";
 import { Link } from "react-router-dom";
 
 class AboutUs extends React.Component {
@@ -13,7 +13,7 @@ class AboutUs extends React.Component {
         </h1>
         <div className="aboutus-body">
           <div className="aboutus-body-parts">
-            <img src={clientimage} alt="client" className="clientimage" />
+            <div className="clientimage"></div>
             <div className="aboutus-details">
               <p className="paragraph">
                 Kees Webster began Keesy Driving School, teaching in the
@@ -44,8 +44,8 @@ class AboutUs extends React.Component {
             </div>
           </div>
           <ContactinfoBox />
+          <Footer />
         </div>
-        <Footer />
       </div>
     );
   }

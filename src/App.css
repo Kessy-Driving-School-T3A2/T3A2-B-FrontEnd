@@ -81,7 +81,7 @@ img {
 .home {
   margin-bottom: calc(1px + 1rem);
   position: relative;
-  top: calc(140px + 1vw);
+  top: calc(137px + 1vw);
 }
 
 .slide-banner {
@@ -89,8 +89,16 @@ img {
   padding: calc(10px + 1rem) calc(25px + 1rem);
 }
 
+.slide-banner {
+  background-image: url(./assets/banner.jpg);
+  background-size: cover;
+  z-index: -1;
+  background-color: black;
+  /* height: 100px; */
+}
+
 .banner-heading {
-  background-color: rgba(0, 0, 0, 0.336);
+  background-color: rgba(15, 15, 15, 0.835);
   padding: calc(15px + 1rem) 0;
   margin: 0 calc(15px + 1rem);
 }
@@ -132,8 +140,11 @@ p {
   flex-wrap: wrap;
 }
 .clientimage {
-  width: 20vw;
-  height: 27vw;
+  background-image: url(https://keesydrivingschool.s3-ap-southeast-2.amazonaws.com/KeesyAboutUs.png);
+  background-size: cover;
+  width: calc(350px + 1rem);
+  height: calc(500px + 1rem);
+  margin-bottom: 10px;
 }
 
 .aboutus-body-parts {
@@ -141,6 +152,7 @@ p {
   flex-flow: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 1rem;
 }
 
 .aboutus-details {
@@ -154,9 +166,11 @@ p {
 }
 .paragraph {
   color: black;
+  font-size: calc(4px + 1rem);
 }
 .textLink {
   color: orange;
+  font-size: calc(4px + 1rem);
 }
 
 /* ----------------- faq ------------------ */
@@ -200,7 +214,7 @@ p {
   padding: 30px;
   background-color: #fff8f8;
   height: calc(18vw + 1rem);
-  width: 150px;
+  width: calc(13vw + 1rem);
   border: 1px solid black;
 }
 
@@ -211,7 +225,7 @@ p {
   padding: 10px 15px;
 }
 .box > ul {
-  font-size: 10px;
+  font-size: calc(1px + 1vw);
   padding: 0px 5px;
   text-align: left;
   color: orange;
@@ -443,12 +457,27 @@ h2 {
     display: flex;
     flex-direction: row;
   }
+
+  .box {
+    width: calc(60vw + 1rem);
+    margin: auto;
+    margin-bottom: 10px;
+    height: auto;
+  }
+
+  .box > ul {
+    font-size: calc(3px + 1rem);
+  }
+
+  .aboutus-body-parts {
+    height: 30rem;
+  }
 }
 
 @media all and (max-width: 900px) {
   .aboutus-body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
     height: 100vw;
   }
@@ -461,6 +490,10 @@ h2 {
     display: flex;
     flex-direction: column;
   }
+
+  .aboutus-body-parts {
+    height: 55rem;
+  }
 }
 
 @media all and (max-width: 800px) {
@@ -468,6 +501,14 @@ h2 {
     display: flex;
     flex-direction: column;
   }
+
+  .aboutus-body-parts {
+    height: 60rem;
+  }
+
+  /* .box {
+    height: auto;
+  } */
 }
 
 @media all and (max-width: 700px) {
@@ -488,6 +529,7 @@ h2 {
     flex-flow: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    height: 90rem;
   }
 
   .aboutus-details {
@@ -533,6 +575,10 @@ h2 {
     padding: 10px 5px;
     position: absolute;
     bottom: -100px;
+  }
+
+  .aboutus-body-parts {
+    height: 70rem;
   }
   .allfaqs_parts {
     display: flex;
@@ -586,6 +632,10 @@ h2 {
   .box {
     height: calc(33vw + 1rem);
   }
+
+  /* .aboutus-body-parts {
+    height: 80rem;
+  } */
 }
 
 @media all and (max-width: 400px) {
@@ -625,5 +675,9 @@ h2 {
     padding: 10px;
     margin: 5px 0;
     font-size: 10px;
+  }
+
+  .aboutus-body-parts {
+    height: 90rem;
   }
 }
