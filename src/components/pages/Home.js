@@ -14,7 +14,6 @@ class Home extends React.Component {
     return (
       <div className="home">
         <div className="slide-banner">
-          <div className="banner-img">add image here</div>
           <div className="banner-heading">
             <h1
               style={{
