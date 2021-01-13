@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import EditFAQ from "./EditFAQ";
+import BackendServer from "../../../apis/BackendServer";
 
 class FAQ extends Component {
   constructor(props) {
@@ -43,6 +44,26 @@ class FAQ extends Component {
     );
   };
 
+  handleUpdatedFaqs = () => {
+    this.setState({ isEditMode: false });
+    this.props.handleFetchUpdatedFaqs();
+  };
+
+  handleDelete = () => {
+    BackendServer.delete("/faq/admin", {
+      data: {
+        _id: this.props.faq._id
+      },
+      headers: {
+        "x-access-token": localStorage.getItem("keesy")
+      }
+    }).then(res => {
+      if (res.data) {
+        this.props.handleFetchUpdatedFaqs();
+      }
+    });
+  };
+
   render() {
     const faq_button = {
       backgroundColor: "orange",
@@ -55,8 +76,10 @@ class FAQ extends Component {
         <div className="onefaq-body-parts">
           {this.state.isEditMode ? (
             <EditFAQ
+              id={this.props.faq._id}
               question={this.props.faq.question}
               answer={this.props.faq.answer}
+              fetchUpdatedFaqs={this.handleUpdatedFaqs}
             />
           ) : (
             this.renderFAQ()
@@ -64,7 +87,9 @@ class FAQ extends Component {
           <button style={faq_button} onClick={this.handleEdit}>
             {this.state.isEditMode ? "Cancel" : "Edit"}
           </button>
-          <button style={faq_button}>Delete</button>
+          <button style={faq_button} onClick={this.handleDelete}>
+            Delete
+          </button>
         </div>
       </div>
     );

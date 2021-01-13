@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackendServer from "../../../apis/BackendServer";
 
 class CreateFAQ extends Component {
   constructor(props) {
@@ -24,11 +25,24 @@ class CreateFAQ extends Component {
     this.setState({ answer: e.target.value });
   };
 
-  handleSubmit = () => {
-    this.props.submitItem(this.state);
-    this.setState({
-      question: "",
-      answer: ""
+  handleSubmit = e => {
+    e.preventDefault();
+    BackendServer.put(
+      "/faq/admin",
+      {
+        _id: this.props.id,
+        question: this.state.question,
+        answer: this.state.answer
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("keesy")
+        }
+      }
+    ).then(res => {
+      if (res.data) {
+        this.props.fetchUpdatedFaqs();
+      }
     });
   };
 
@@ -58,7 +72,7 @@ class CreateFAQ extends Component {
         />
         <input
           type="submit"
-          value="Add FAQ"
+          value="Submit"
           onClick={this.handleSubmit}
           className="form-field"
           style={{ backgroundColor: "#f47b2a" }}
