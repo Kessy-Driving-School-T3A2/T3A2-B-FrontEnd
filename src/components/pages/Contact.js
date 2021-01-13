@@ -1,8 +1,27 @@
 import React from "react";
 import Footer from "../Footer";
 import service from "../../assets/service.jpg";
+import MailGunForm from "./MailGunForm";
+import BackendServer from "../../apis/BackendServer";
 
 class Contact extends React.Component {
+  handleSubmitMail = newMail => {
+    BackendServer.post("/contactus", {
+      name: newMail.name,
+      email: newMail.email,
+      subject: newMail.subject,
+      text: newMail.text
+    })
+      .then(res => {
+        res.json().then(data => {
+          console.log(data.message);
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
   render() {
     return (
       <div className="common_container">
@@ -26,60 +45,7 @@ class Contact extends React.Component {
               <p>info@keesydrivingschool.com.au</p>
             </div>
             <div className="common_container-parts">
-              <form
-                style={{
-                  display: "flex",
-                  flexFlow: "column"
-                }}
-              >
-                <input
-                  type="text"
-                  value="Name"
-                  style={{
-                    margin: "3px 10px",
-                    color: "black",
-                    backgroundColor: "#C4C4C4",
-                    border: "none",
-                    padding: "10px"
-                  }}
-                />
-                <input
-                  type="text"
-                  value="Phone"
-                  style={{
-                    margin: "3px 10px",
-                    color: "black",
-                    backgroundColor: "#C4C4C4",
-                    border: "none",
-                    padding: "10px"
-                  }}
-                />
-                <input
-                  type="text"
-                  value="Email"
-                  style={{
-                    margin: "3px 10px",
-                    color: "black",
-                    backgroundColor: "#C4C4C4",
-                    border: "none",
-                    padding: "10px"
-                  }}
-                />
-                <input
-                  type="text"
-                  value="Message"
-                  style={{
-                    margin: "3px 10px",
-                    color: "black",
-                    backgroundColor: "#C4C4C4",
-                    border: "none",
-                    padding: "10px 10px 30px 10px"
-                  }}
-                />
-                <button style={{ margin: "3px 10px", width: "40px" }}>
-                  Send
-                </button>
-              </form>
+              <MailGunForm submitItem={this.handleSubmitMail} />
             </div>
           </div>
         </div>
