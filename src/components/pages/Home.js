@@ -72,8 +72,12 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <Bottombanner />
-          <Footer />
+          <div className="home-body-parts">
+            <Bottombanner />
+          </div>
+          <div className="home-body-parts">
+            <Footer />
+          </div>
         </div>
       </div>
     );

@@ -5,9 +5,9 @@ class Bottombanner extends React.Component {
     return (
       <div className="bottompic">
         <div className="bottompic-contact">
-          <p>To Book Your Lesson Call</p>
-          <p>Kessy Driving School</p>
-          <p>0419 421 848</p>
+          {/* <p>To Book Your Lesson Call</p>
+          <p>Keesy Driving School</p>
+          <p>0419 421 848</p> */}
         </div>
       </div>
     );
