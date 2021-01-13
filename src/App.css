@@ -324,7 +324,7 @@ p {
 
 .onePrice-body-parts {
   display: flex;
-  flex-direction: column;
+
   margin: auto;
 }
 
@@ -453,7 +453,7 @@ h2 {
   }
 
   .footer {
-    height: 12vw;
+    height: 16vw;
     font-size: 18px;
     position: absolute;
     bottom: -10vw;
@@ -508,7 +508,7 @@ h2 {
     height: 140px;
     font-size: 18px;
     position: absolute;
-    bottom: -10vw;
+    bottom: -vw;
   }
 }
 
