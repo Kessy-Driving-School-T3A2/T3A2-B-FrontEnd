@@ -90,7 +90,7 @@ img {
 }
 
 .slide-banner {
-  background-image: url(./assets/banner.jpg);
+  background-image: url(https://keesydrivingschool.s3-ap-southeast-2.amazonaws.com/keesydriving.png);
   background-size: cover;
   z-index: -1;
   background-color: black;
@@ -101,6 +101,9 @@ img {
   background-color: rgba(15, 15, 15, 0.835);
   padding: calc(15px + 1rem) 0;
   margin: 0 calc(15px + 1rem);
+}
+.banner-heading > a {
+  font-size: calc(1px + 1rem);
 }
 
 .home-body-parts {
@@ -113,6 +116,8 @@ img {
 }
 .one-part > p {
   width: 100px;
+  color: black;
+  font-size: calc(2.5px + 1rem);
 }
 p {
   color: orange;
@@ -411,15 +416,15 @@ h2 {
   display: flex;
   flex-flow: column;
   text-align: center;
-  background-image: url(./assets/bottompic.jpg);
+  background-image: url(https://keesydrivingschool.s3-ap-southeast-2.amazonaws.com/KeesyDrivingBanner.png);
   background-size: cover;
-  height: 5vw;
+  height: 40vw;
 }
-.bottompic-contact > p {
+/* .bottompic-contact > p {
   color: black;
   font-size: 13px;
   font-weight: 900;
-}
+} */
 
 /* ----------------------- Footer --------------- */
 
@@ -429,28 +434,29 @@ h2 {
   padding: 15px 10px;
   margin: auto;
   width: 100%;
-  height: 110px;
+  /* height: 10vw; */
   position: inherit;
   bottom: 0px;
-  font-size: 25px;
+
   z-index: 0;
 }
 .footer > p {
   color: white;
-  font-size: 10px;
+  font-size: calc(1px + 1rem);
 }
 
 /*------------------------ media-query ------------------------- */
 
 @media all and (max-width: 1000px) {
   .bottompic-contact {
-    padding-top: 8vw 0;
-    height: 10vw;
+    height: 40vw;
   }
+
   .footer {
-    height: 110px;
-    font-size: 20px;
-    padding: 10px 5px;
+    height: 12vw;
+    font-size: 18px;
+    position: absolute;
+    bottom: -10vw;
   }
 
   .allfaqs_parts {
@@ -494,6 +500,16 @@ h2 {
   .aboutus-body-parts {
     height: 55rem;
   }
+  .bottompic-contact {
+    height: 40vw;
+  }
+
+  .footer {
+    height: 140px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -10vw;
+  }
 }
 
 @media all and (max-width: 800px) {
@@ -506,9 +522,16 @@ h2 {
     height: 60rem;
   }
 
-  /* .box {
-    height: auto;
-  } */
+  .bottompic-contact {
+    height: 40vw;
+  }
+
+  .footer {
+    height: 140px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -20vw;
+  }
 }
 
 @media all and (max-width: 700px) {
@@ -536,6 +559,17 @@ h2 {
     width: 80vw;
     height: auto;
     margin-bottom: 20px;
+  }
+
+  .bottompic-contact {
+    height: 35vw;
+  }
+
+  .footer {
+    height: 140px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -23vw;
   }
 }
 
@@ -566,7 +600,7 @@ h2 {
   }
 
   .bottompic-contact {
-    height: 15vw;
+    height: 29vw;
   }
 
   .footer {
@@ -574,7 +608,7 @@ h2 {
     font-size: 18px;
     padding: 10px 5px;
     position: absolute;
-    bottom: -100px;
+    bottom: -28vw;
   }
 
   .aboutus-body-parts {
@@ -620,14 +654,17 @@ h2 {
 }
 
 @media all and (max-width: 500px) {
+  .one-part > p {
+    font-size: calc(5px + 1rem);
+  }
   .bottompic-contact {
-    padding-top: 8vw 0;
-    height: 20vw;
+    padding-top: 8vw;
+    height: 30vw;
   }
 
   .footer {
     position: absolute;
-    bottom: -110vh;
+    bottom: -39vw;
   }
   .box {
     height: calc(33vw + 1rem);
@@ -639,6 +676,9 @@ h2 {
 }
 
 @media all and (max-width: 400px) {
+  .one-part > p {
+    font-size: calc(4px + 1rem);
+  }
   .clientimage {
     width: 50vw;
     height: 60vw;
@@ -646,7 +686,7 @@ h2 {
 
   .bottompic-contact {
     padding-top: 7vw 0;
-    height: 25vw;
+    height: 30vw;
   }
   .form-field {
     margin: 3px 0;
