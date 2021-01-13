@@ -1,38 +1,38 @@
 import React, { Component } from "react";
 import BackendServer from "../../../apis/BackendServer";
 
-class EditFAQ extends Component {
+class EditPrice extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: "",
-      answer: ""
+      lesson: "",
+      price: ""
     };
   }
 
   componentDidMount() {
     this.setState({
-      question: this.props.question,
-      answer: this.props.answer
+      lesson: this.props.lesson,
+      price: this.props.price
     });
   }
 
-  handleQuestionChange = e => {
-    this.setState({ question: e.target.value });
+  handleLessonChange = e => {
+    this.setState({ lesson: e.target.value });
   };
 
-  handleAnswerChange = e => {
-    this.setState({ answer: e.target.value });
+  handlePriceChange = e => {
+    this.setState({ price: e.target.value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
     BackendServer.put(
-      "/faq/admin",
+      "/prices/admin",
       {
         _id: this.props.id,
-        question: this.state.question,
-        answer: this.state.answer
+        lesson: this.state.lesson,
+        price: this.state.price
       },
       {
         headers: {
@@ -41,32 +41,37 @@ class EditFAQ extends Component {
       }
     ).then(res => {
       if (res.data) {
-        this.props.fetchUpdatedFaqs();
+        this.props.fetchUpdatedPrices();
       }
     });
   };
 
   render() {
+    const priceEditField = {
+      width: "250px"
+    };
     return (
       <form
         style={{
           display: "flex",
           flexFlow: "column",
-          margin: "30px 15vw"
+          borderTop: "1px solid black",
+          borderBottom: "1px solid black"
         }}
       >
+        <label>Edit Lesson:</label>
         <input
-          placeholder="Add Question"
           type="text"
-          value={this.state.question}
-          onChange={this.handleQuestionChange}
+          value={this.state.lesson}
+          onChange={this.handleLessonChange}
           className="form-field"
+          style={priceEditField}
         />
+        <label>Edit Price:</label>
         <input
-          placeholder="Add Answer"
           type="text"
-          value={this.state.answer}
-          onChange={this.handleAnswerChange}
+          value={this.state.price}
+          onChange={this.handlePriceChange}
           className="form-field"
           style={{ paddingBottom: "30px" }}
         />
@@ -82,4 +87,4 @@ class EditFAQ extends Component {
   }
 }
 
-export default EditFAQ;
+export default EditPrice;

@@ -32,7 +32,13 @@ class AdminPrice extends React.Component {
   //render all prices list with the new one
   renderAllPrices = () => {
     return this.state.prices.map(price => {
-      return <Price key={price._id} price={price} />;
+      return (
+        <Price
+          key={price._id}
+          price={price}
+          handleFetchUpdatedPrices={this.getAllPrices}
+        />
+      );
     });
   };
 

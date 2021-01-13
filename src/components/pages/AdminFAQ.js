@@ -59,7 +59,9 @@ class AdminFAQ extends React.Component {
   //render all faqs list with the new one
   renderAllFAQs = () => {
     return this.state.faqs.map(faq => {
-      return <FAQ key={faq._id} faq={faq} />;
+      return (
+        <FAQ key={faq._id} faq={faq} handleFetchUpdatedFaqs={this.getAllFAQs} />
+      );
     });
   };
 
