@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Footer";
 import ContactinfoBox from "../ContactinfoBox";
-// import clientimage from "../../assets/clientimage.jpg";
 import { Link } from "react-router-dom";
 
 class AboutUs extends React.Component {

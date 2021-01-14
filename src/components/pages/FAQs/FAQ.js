@@ -3,6 +3,7 @@ import EditFAQ from "./EditFAQ";
 import BackendServer from "../../../apis/BackendServer";
 
 class FAQ extends Component {
+  //call constructor
   constructor(props) {
     super(props);
     //create state to hold items in an empty array
@@ -11,12 +12,14 @@ class FAQ extends Component {
     };
   }
 
+  // handeling the edit mood by changing the state of each faq edit.
   handleEdit = () => {
     this.setState({
       isEditMode: !this.state.isEditMode
     });
   };
 
+  // rendering each faq
   renderFAQ = () => {
     return (
       <div className="onefaq-body-parts">
@@ -49,6 +52,7 @@ class FAQ extends Component {
     this.props.handleFetchUpdatedFaqs();
   };
 
+  // handeling the delete functionality of each faq
   handleDelete = () => {
     BackendServer.delete("/faq/admin", {
       data: {

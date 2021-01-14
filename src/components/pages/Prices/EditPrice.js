@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import BackendServer from "../../../apis/BackendServer";
 
 class EditPrice extends Component {
+  // calling the constructor, holding the state
   constructor(props) {
     super(props);
     this.state = {
@@ -10,6 +11,7 @@ class EditPrice extends Component {
     };
   }
 
+  // checking if the component has mounted successfully with the content
   componentDidMount() {
     this.setState({
       lesson: this.props.lesson,
@@ -17,14 +19,17 @@ class EditPrice extends Component {
     });
   }
 
+  // geting the edited field value
   handleLessonChange = e => {
     this.setState({ lesson: e.target.value });
   };
 
+  // geting the edited field value
   handlePriceChange = e => {
     this.setState({ price: e.target.value });
   };
 
+  // handeling the submition of the edited price, sending it to the backend via axios. It requires the auth token in header to give the access to edit, then fetching the full price list including the updated one
   handleSubmit = e => {
     e.preventDefault();
     BackendServer.put(
@@ -46,6 +51,7 @@ class EditPrice extends Component {
     });
   };
 
+  // rendering the price edit form
   render() {
     const priceEditField = {
       width: "250px"

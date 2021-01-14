@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class Review extends Component {
+  // rendering each review on screen
   renderReview = () => {
     return (
       <div
