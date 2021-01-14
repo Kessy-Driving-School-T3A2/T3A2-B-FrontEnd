@@ -2,26 +2,8 @@ import React from "react";
 import Footer from "../Footer";
 import service from "../../assets/service.jpg";
 import MailGunForm from "./MailGunForm";
-import BackendServer from "../../apis/BackendServer";
 
 class Contact extends React.Component {
-  handleSubmitMail = newMail => {
-    BackendServer.post("/contactus", {
-      name: newMail.name,
-      email: newMail.email,
-      subject: newMail.subject,
-      text: newMail.text
-    })
-      .then(res => {
-        res.json().then(data => {
-          console.log(data.message);
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
-
   render() {
     return (
       <div className="common_container">
@@ -45,7 +27,7 @@ class Contact extends React.Component {
               <p>info@keesydrivingschool.com.au</p>
             </div>
             <div className="common_container-parts">
-              <MailGunForm submitItem={this.handleSubmitMail} />
+              <MailGunForm />
             </div>
           </div>
         </div>
