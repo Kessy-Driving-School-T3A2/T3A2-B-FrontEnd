@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import BackendServer from "../../apis/BackendServer";
 
 class MailgunForm extends Component {
   constructor(props) {
@@ -7,9 +8,27 @@ class MailgunForm extends Component {
       name: "",
       email: "",
       subject: "",
-      text: ""
+      text: "",
+      emailSent: false
     };
   }
+
+  handleSubmitMail = newMail => {
+    BackendServer.post("/contactus", {
+      name: this.state.name,
+      email: this.state.email,
+      subject: this.state.subject,
+      text: this.state.text
+    })
+      .then(res => {
+        if (res.status === 200) {
+          this.setState({ emailSent: true });
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   handleNameChange = e => {
     this.setState({ name: e.target.value });
@@ -26,8 +45,9 @@ class MailgunForm extends Component {
     this.setState({ text: e.target.value });
   };
 
-  handleSubmit = () => {
-    this.props.submitItem(this.state);
+  handleSubmit = e => {
+    e.preventDefault();
+    this.handleSubmitMail();
     this.setState({
       name: "",
       email: "",
@@ -96,6 +116,7 @@ class MailgunForm extends Component {
             padding: "10px 10px 30px 10px"
           }}
         />
+        {this.state.emailSent ? <p>Email sent!</p> : null}
         <button
           onClick={this.handleSubmit}
           style={{ margin: "3px 10px", width: "40px" }}
