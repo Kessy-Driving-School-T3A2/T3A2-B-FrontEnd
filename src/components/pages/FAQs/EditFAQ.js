@@ -17,14 +17,17 @@ class EditFAQ extends Component {
     });
   }
 
+  //handeling each question change on edit
   handleQuestionChange = e => {
     this.setState({ question: e.target.value });
   };
 
+  //handeling each answer change on edit
   handleAnswerChange = e => {
     this.setState({ answer: e.target.value });
   };
 
+  //handeling the submition of edited faq to the backend route. the edit function requires the auth token as header to be functional, after updating fetching the new list of faqs including the updated one
   handleSubmit = e => {
     e.preventDefault();
     BackendServer.put(

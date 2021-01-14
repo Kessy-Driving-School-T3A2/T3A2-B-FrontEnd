@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 class CreateReview extends Component {
+  //calling the constructor method
   constructor(props) {
     super(props);
     this.state = {
@@ -9,14 +10,18 @@ class CreateReview extends Component {
     };
   }
 
+  // catching the field value
+
   handleNameChange = e => {
     this.setState({ name: e.target.value });
   };
 
+  // catching the field value
   handleReviewChange = e => {
     this.setState({ review: e.target.value });
   };
 
+  // handeling the submition of the review
   handleSubmit = () => {
     this.props.submitItem(this.state);
     this.setState({
@@ -25,6 +30,7 @@ class CreateReview extends Component {
     });
   };
 
+  // creating the review form
   render() {
     return (
       <form
