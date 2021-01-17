@@ -50,7 +50,8 @@ class Contact extends React.Component {
               <img
                 src={service}
                 alt="service area"
-                style={{ width: "30vw", height: "auto" }}
+                className="map"
+                // style={{ width: "30vw", height: "auto" }}
               />
             </div>
           </div>

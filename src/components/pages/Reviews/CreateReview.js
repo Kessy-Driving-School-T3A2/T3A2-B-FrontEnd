@@ -39,6 +39,7 @@ class CreateReview extends Component {
           flexFlow: "column",
           margin: "30px 15vw"
         }}
+        className="onereview"
       >
         <input
           placeholder="Add Your Name"

@@ -68,22 +68,26 @@ class Reviews extends React.Component {
         <h1>Reviews</h1>
         <div>
           <div className="review_page_body_parts">
-            {this.state.reviews.length ? (
-              this.renderAllReviews()
-            ) : (
-              <h3>Loading Reviews...</h3>
-            )}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "left"
-              }}
-            >
-              <h1>Add A Review</h1>
-              <CreateReview submitItem={this.handleSubmitReview} />
+            <div className="review_page_body_parts_child">
+              {this.state.reviews.length ? (
+                this.renderAllReviews()
+              ) : (
+                <h3>Loading Reviews...</h3>
+              )}
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "left"
+                }}
+              >
+                <h1>Add A Review</h1>
+                <CreateReview submitItem={this.handleSubmitReview} />
+              </div>
             </div>
-            <ContactinfoBox />
+            <div className="review_page_body_parts_child">
+              <ContactinfoBox />
+            </div>
           </div>
           <div className="review_page_body_parts">
             <Footer />
