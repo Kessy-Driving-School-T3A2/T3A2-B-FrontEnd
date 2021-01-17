@@ -255,6 +255,11 @@ p {
   text-align: left;
   padding: 30px;
 }
+
+.common_container-one-part {
+  margin-bottom: 10vw;
+}
+
 .common_container-one-part-child {
   display: flex;
   flex-direction: row;
@@ -268,6 +273,7 @@ p {
   display: flex;
   flex-direction: column;
   text-align: left;
+  padding-top: 20px;
 }
 
 .hours_service > ul {
@@ -278,13 +284,28 @@ p {
   padding: 5px 0;
 }
 
-/* reviews */
+/* ------------------------- reviews ------------------------- */
 .review-container-parts {
   display: flex;
 }
 
+.onereview {
+  width: 60vw;
+  margin-right: 0;
+}
+
 .all-reviews {
   height: 90vw;
+}
+
+.review_page_body_parts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review_page_body_parts_child {
+  width: 40vw;
 }
 
 /* admin button controll */
@@ -304,6 +325,11 @@ p {
 
 .sideContactBox {
   color: black;
+}
+
+.hours_service > .map {
+  width: 30vw;
+  height: auto;
 }
 
 /* create faq form */
@@ -465,7 +491,7 @@ h2 {
   }
 
   .box {
-    width: calc(60vw + 1rem);
+    /* width: calc(60vw + 1rem); */
     margin: auto;
     margin-bottom: 10px;
     height: auto;
@@ -477,6 +503,20 @@ h2 {
 
   .aboutus-body-parts {
     height: 30rem;
+  }
+
+  .review_page_body_parts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .review_page_body_parts_child {
+    width: 100vw;
+  }
+  .onereview {
+    width: 80vw;
+    margin-right: 0;
   }
 }
 
@@ -507,8 +547,7 @@ h2 {
   .footer {
     height: 140px;
     font-size: 18px;
-    position: absolute;
-    bottom: -vw;
+    position: static;
   }
 }
 
@@ -531,6 +570,10 @@ h2 {
     font-size: 18px;
     position: absolute;
     bottom: -20vw;
+  }
+  .hours_service > .map {
+    width: 70vw;
+    height: auto;
   }
 }
 
@@ -607,8 +650,8 @@ h2 {
     height: 140px;
     font-size: 18px;
     padding: 10px 5px;
-    position: absolute;
-    bottom: -28vw;
+    position: static;
+    /* bottom: -28vw; */
   }
 
   .aboutus-body-parts {
@@ -651,6 +694,9 @@ h2 {
   .form-field {
     margin: 6px 0;
   }
+  .hours_service > img {
+    width: 70vw;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -662,17 +708,9 @@ h2 {
     height: 30vw;
   }
 
-  .footer {
-    position: absolute;
-    bottom: -39vw;
-  }
   .box {
     height: calc(33vw + 1rem);
   }
-
-  /* .aboutus-body-parts {
-    height: 80rem;
-  } */
 }
 
 @media all and (max-width: 400px) {
