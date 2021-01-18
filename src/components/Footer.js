@@ -10,7 +10,7 @@ class Footer extends React.Component {
         </p>
         <p>0419 421 848</p>
         <p>info@keesydrivingschool.com.au</p>
-        <p>Developed By Syeda & Anthony | 2021 | MERN</p>
+        <p>Developed By Anthony & Syeda | 2021 | MERN</p>
       </div>
     );
   }
